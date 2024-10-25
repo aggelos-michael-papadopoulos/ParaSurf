@@ -1,0 +1,57 @@
+.\" Copyright (c) 1984,1989 by the Regents of the University of California.
+.\" All Rights Reserved.
+.\" $Id: ms.3,v 1.1 94/11/02 13:10:21 gregc Exp $
+.TH MS 3 "14 Sept 1989"
+.SH NAME
+ms_read_record, ms_parse, ms_write_record \- read and write Molecular Surface (ms) records
+.SH SYNOPSIS
+.nf
+.B #include <ms.h>
+.PP
+.B ms_record ms_read_record(f)
+.B FILE *f;
+.PP
+.B ms_record ms_parse(line_buffer)
+.B char *line_buffer;
+.PP
+.B void ms_write_record(f, m)
+.B FILE *f;
+.B ms_record *m;
+.fi
+.SH DESCRIPTION
+The routines listed above
+are subroutines for Molecular Surface record I/O
+and are available in the pdb library, typically
+.IR "-L/usr/local/lib/midas -lpdb" .
+.PP
+Although the header file is too long to reproduce here, it should be
+perused before using any of the above routines.
+It is typically found in
+.IR /usr/local/midas/include .
+.PP
+\fBms_read_record\fP reads the next line of input from the file \fBf\fP,
+and returns the contents parsed into a C structure.
+\fBms_parse\fP parses the contents of the line buffer
+and returns a C structure.
+\fBms_write_record\fP writes the contents of the MS record (\fB*m\fP) to 
+the file \fBf\fP.
+.SH "SEE ALSO"
+dms(1)
+.SH DIAGNOSTICS
+Upon reaching the end of the file, \fBms_read_record\fP will return
+a record with MS_END as its type.
+.SH COPYRIGHT
+Copyright \(co 1992 The Regents of the University of California.
+All rights reserved.
+.PP
+Redistribution and use in source and binary forms are permitted
+provided that the above copyright notice and this paragraph are
+duplicated in all such forms and that any documentation,
+advertising materials, and other materials related to such
+distribution and use acknowledge that the software was developed
+by the University of California, San Francisco.  The name of the
+University may not be used to endorse or promote products derived
+from this software without specific prior written permission.
+THIS SOFTWARE IS PROVIDED ``AS IS'' AND WITHOUT ANY EXPRESS OR
+IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
+WARRANTIES OF MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.

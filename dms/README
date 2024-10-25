@@ -1,0 +1,138 @@
+Description:
+
+	DMS is "Distributed MS", a version of the solvent-accessible
+	surface computation program.  This version splits the
+	computation into independent units and executes each unit on a
+	dms server which runs somewhere on the local area network.
+
+	Dms is distributed as open source, subject to the legal
+	restrictions noted at the end of this file.
+
+	Consult the dms manual page (dms.1) for details on usage.
+
+Prerequisites:
+
+	You need GNU make and a C compiler to build this software.
+	When we refer to the "make" command below, you should use
+	the actual GNU make executable file name.  On Linux and
+	Cygwin, the GNU make executable is called "make".  On IRIX,
+	the GNU make executable is part of the free software installed
+	in /usr/freeware/bin and is called "gmake".
+
+	This software has been built on Red Hat Enterprise Linux
+	and on Windows XP Professional with Cygwin.
+
+Installation:
+
+	Edit "GNUmakefile" and change LIBDIR and BINDIR to the
+	appropriate location for your system.
+
+	At this point, you could get away with typing "make install"
+	and be done.  You may or may not want to do the following
+	before that:
+
+	Edit the file "dms_param.h" and set the appropriate
+	parameters to the desired values.  You may need to twiddle with
+	the last few parameters if you want to get the optimal performance.
+
+	By default, dms runs on the local host only, instead of running
+	in parallel on multiple hosts.  If this behavior is sufficient
+	for your needs, type "make install" and stop here.  Otherwise...
+
+	Edit the file "dms_servers.proto" to contain a list of hosts that
+	will run dms servers.  All machines participating in a single dms
+	calculation must be binary compatible with the machine initiating
+	the calculation.  For sites with multiple machine architectures,
+	this may mean that there are several distinct "pools" of dms
+	servers, for calculations initiated by a machine within a pool.
+	Now type "make install".
+
+	Dms must be installed as above on each server machine, and on each
+	such machine the following steps must be performed as root:
+
+	1) Register the 'dms' service on the host.  On most UNIX systems
+	this is done by editing /etc/services and adding the following
+	line:
+		dms 14148/tcp
+	
+	On Mac OS X systems, instead execute the following command:
+
+		echo dms 14148/tcp | niload services .
+	
+	2) Add this line to /etc/inetd.conf:
+
+		dms stream tcp nowait daemon dmsd_location dmsd
+	
+	where 'dmsd_location' is where dmsd is installed.  (If you
+	didn't change the Makefile at all, then the location is
+	/usr/local/lib/dms/dmsd)
+
+	3) Make the inetd daemon reread the inetd.conf file.  This is
+	accomplished by sending the inetd process a HUP signal.  In
+	order to send the signal, you need to know inetd's process ID.
+	The process ID can be found by examining the output of 'ps agx'
+	or 'ps -e' (depending on your system).  The rightmost column
+	contains the process name, so look for the line that includes
+	'inetd' somewhere in the righthand column.  On that line, in
+	the 'PID' column, is inetd's process ID.  The signal is then 
+	sent with the command:
+
+		kill -HUP process_ID
+	
+	After performing the above steps on all servers, you should 
+	verify that dms is indeed performing distributed computations
+	as expected.  To do this, you need to have a PDB file available
+	to use as a test input (preferably a small one).  Once you do,
+	run the command:
+
+		dms your_PDB_file -v -o /dev/null
+	
+	If you have correctly installed dms for distributed computation,
+	the output will contain a line of the form:
+
+		Server request count:
+
+	followed by a list of hosts that dms ran on to do the calculation,
+	and the amount of calculation that each host performed.  If the
+	list of servers is what you expect, and no calculation count is
+	zero, then you have installed dms correctly.  If one or more
+	calculation counts are zero then you did not install dms correctly
+	on those hosts.  For those problem hosts you should verify that
+	the above steps were carried out correctly as well as insuring
+	that dmsd is installed in the correct location and is executable.  
+	If your list of server hosts is not what you expect and is simply
+	'localhost' instead, the you have not correctly completed step (1)
+	on the local machine.
+
+
+Legal Restrictions:
+
+Copyright (c) <2002> The Regents of the University of California.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+  1. Redistributions of source code must retain the above copyright
+     notice, this list of conditions, and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above
+     copyright notice, this list of conditions, and the following
+     disclaimer in the documentation and/or other materials provided
+     with the distribution.
+  3. Redistributions must acknowledge that this software was
+     originally developed by the UCSF Computer Graphics Laboratory
+     under support by the NIH National Center for Research Resources,
+     grant P41-RR01081.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDER "AS IS" AND ANY
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+

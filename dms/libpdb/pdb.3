@@ -1,0 +1,87 @@
+.\" Copyright (c) 1984,1989 by the Regents of the University of California.
+.\" All Rights Reserved.
+.\" $Id: pdb.3,v 1.16 94/11/06 19:55:29 gregc Exp $
+.TH PDB 3 "14 Sept 1989"
+.SH NAME
+pdb_read_record, pdb_parse, pdb_write_record \- read and write Brookhaven Protein DataBank records
+.SH SYNOPSIS
+.nf
+.B #include <pdb.h>
+.PP
+.B pdb_record pdb_read_record(f)
+.B FILE *f;
+.PP
+.B pdb_record pdb_parse(line_buffer)
+.B char *line_buffer;
+.PP
+.B "void pdb_write_record(f, r, name, line_num)"
+.B FILE *f;
+.B pdb_record *r;
+.B char *name;
+.B int line_num;
+.fi
+.SH DESCRIPTION
+The routines listed above
+are subroutines for Brookhaven Protein Data Bank record I/O
+and are available in the pdb library, typically
+.IR "-L/usr/local/lib/midas -lpdb" .
+.PP
+Although the header file is too long to reproduce here, it should be
+perused before using any of the above routines.
+It is typically found in
+.IR /usr/local/midas/include .
+\fBpdb_read_record\fP reads the next line of input from the file \fBf\fP,
+and returns the contents parsed into a C structure.
+\fBpdb_parse\fP parses the contents of the line buffer
+and returns a C structure.
+\fBpdb_write_record\fP writes the contents of the PDB record (\fB*r\fP) to 
+the file \fBf\fP.  If the \fBname\fP is non-null, then it and the line
+number given (\fBline_num\fP) are placed in columns 72 through 80 on the
+line in standard PDB format.
+.PP
+\fBpdb_read_record\fP and \fBpdb_write_record\fP automatically
+handle versions 5 and 6 of the UCSFCGL's PDB scene annotation records.
+The version number is automatically changed when a USER  PDBRUN record is read
+or written.
+Any other version number turns off the parsing of scene annotation records.
+.SH "SEE ALSO"
+``Protein Data Bank Atomic Coordinate and Bibliographic Entry Format Description,'' Febuary 1992,
+Brookhaven National Laboratory
+(URL: ftp://ftp.pdb.bnl.gov/pub/format_desc.ps),
+the January 1993 Protein Data Bank Quarterly Newsletter,
+and Couch, \fIet. al\fP, ``Annotating PDB Files with Scene Information'',
+(in press)
+(URL: http://cgl.ucsf.edu/????).
+.SH DIAGNOSTICS
+Upon reaching the end of the file, \fBpdb_read_record\fP will return
+a record with PDB_END as its type.
+.SH NOTES
+The subtype field of USERxx structure tells what the \fIxx\fP part was.
+The rest of the line, up to the card sequence portion, is the text field.
+.PP
+Due to the way Brookhaven encodes their files,
+atom names usually have leading blanks and sometimes have embedded blanks.
+Residue names occasionally have leading blanks too.
+To be entirely consistent with the PDB format, the programmer should put those
+blanks in before using \fBpdb_write_record\fP.
+.SH BUGS
+Doesn't allow exact duplication of the PDB card image sorting field
+(columns 73 through 80).
+.PP
+Routines are needed to convert to and from PDB typesetting conventions
+in COMPND, SOURCE, AUTHOR, and JRNL records.
+.SH COPYRIGHT
+Copyright \(co 1989 The Regents of the University of California.
+All rights reserved.
+.PP
+Redistribution and use in source and binary forms are permitted
+provided that the above copyright notice and this paragraph are
+duplicated in all such forms and that any documentation,
+advertising materials, and other materials related to such
+distribution and use acknowledge that the software was developed
+by the University of California, San Francisco.  The name of the
+University may not be used to endorse or promote products derived
+from this software without specific prior written permission.
+THIS SOFTWARE IS PROVIDED ``AS IS'' AND WITHOUT ANY EXPRESS OR
+IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
+WARRANTIES OF MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
