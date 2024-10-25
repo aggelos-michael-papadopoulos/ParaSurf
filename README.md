@@ -1,19 +1,24 @@
 # **ParaSurf**
 ## **Surface-Based Deep Learning for Paratope-Antigen Interaction Prediction**
 
-State-of-the-art results across three antibody antigen benchmarks
+State-of-the-art results across three antibody antigen benchmarks:
 * PECAN 
 * Paragraph Expanded
 * MIPE
 
-[//]: # (![Alt text]&#40;images/graphical_abstract.jpg&#41;)
+![Alt text](images/results.png)
+
+
+## **ParaSurf Graphical Absract**
+![Alt text](images/graphical_abstract.jpg)
 
 
 ## INSTALL
-
-- git clone 
+Install ParaSurf
+```bash
+- git clone https://github.com/aggelos-michael-papadopoulos/ParaSurf.git 
 - enviroment etc
-
+```
 
 Install the **DMS software** for the surface molecular representation
 ```bash
