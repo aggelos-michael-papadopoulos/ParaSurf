@@ -15,7 +15,11 @@ State-of-the-art results across three antibody antigen benchmarks
 - enviroment etc
 
 
-
+Install the **DMS software** for the surface molecular representation
+```bash
+cd dms
+sudo make install
+```
 
 
 
