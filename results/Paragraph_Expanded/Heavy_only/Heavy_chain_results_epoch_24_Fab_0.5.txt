@@ -1,0 +1,14 @@
+Average Metrics:
+
+Average AUC-ROC: 0.9636
+Average Accuracy: 0.8947
+Average Precision: 0.5098
+Average Recall: 0.9171
+Average F1 Score: 0.6553
+Average F1 Score: 0.6383
+Average AUC-PR: 0.7637
+Average MCC: 0.6253
+CAUROC: 0.9770
+Average NPV: 0.9867
+Average SPC: 0.8908
+Average FPR: 0.1092
