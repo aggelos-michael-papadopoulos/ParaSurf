@@ -2,7 +2,6 @@ import numpy as np, re
 from .rotation import rotation_quaternion
 from scipy.cluster.hierarchy import fclusterdata
 from sklearn.cluster import MeanShift
-from numba import jit
 
 
 def mol2_reader(mol_file):
@@ -148,37 +147,6 @@ def dist_point_from_lig(p, lig_coords):
     """
     return np.min(np.linalg.norm(lig_coords - p, axis=1))
 
-
-def get_windows_data(data, ndims, step):
-    """helper iterator method: gets data, slices it to windows defined by ndims, returns its coordinates """
-    if isinstance(ndims, tuple):
-        (nx, ny, nz) = ndims
-    else:
-        nx = ny = nz = ndims
-    (maxx, maxy, maxz) = data.shape[:3]
-    # the following might be ineffective, but simple
-    #step = 8
-    for i in range(0, maxx - nx, step):
-        for j in range(0, maxy - ny, step):
-            for k in range(0, maxz - nz, step):
-                yield i, j, k, data[i:i+nx, j:j+ny, k:k+nz, :]
-
-
-def get_active_voxels(voxels,coords,voxel_size=1.0):
-    
-    actives = np.zeros(voxels.shape[0],dtype=bool)
-    #st=time.time()
-    vox_limits=np.concatenate((voxels-voxel_size/2,voxels+voxel_size/2),axis=1)
-
-    for coord in coords:
-        actives += np.all(vox_limits[:,:3]<=coord,axis=1) * np.all(vox_limits[:,3:]>=coord,axis=1) 
-#        idx = np.where(inside_voxel)[0]
-#        if len(idx)==0:
-#            continue
-#        else:
-#            actives[idx] = True
-    #print 'tot=',time.time()-st
-    return actives, sum(actives)
 
 
 def clustering(data,T,cls_method,bw):
