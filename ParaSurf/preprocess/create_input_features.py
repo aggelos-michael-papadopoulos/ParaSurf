@@ -3,15 +3,13 @@ from multiprocessing import Lock
 import time, os
 import numpy as np
 from Bio.PDB.PDBParser import PDBParser
-# from bsite_lib import readSurfpoints, readSurfpoints_with_residues, dist_point_from_lig
-from ..utils.bsite_lib import readSurfpoints, readSurfpoints_with_residues, dist_point_from_lig
-# from features import KalasantyFeaturizer, KalasantyFeaturizer_with_force_fields
-from ..utils.features import KalasantyFeaturizer, KalasantyFeaturizer_with_force_fields
+# from ..utils.bsite_lib import readSurfpoints, readSurfpoints_with_residues, dist_point_from_lig
+from ParaSurf.utils.bsite_lib import readSurfpoints, readSurfpoints_with_residues, dist_point_from_lig
+from ParaSurf.utils.features import KalasantyFeaturizer, KalasantyFeaturizer_with_force_fields
 from scipy import sparse
 from tqdm import tqdm
 import warnings
-# from distance_coords import locate_receptor_binding_site_residues
-from ..utils.distance_coords import locate_receptor_binding_site_residues
+from ParaSurf.utils.distance_coords import locate_receptor_binding_site_residues
 from check_empty_features import remove_empty_features
 
 # Ignore warnings
@@ -21,7 +19,7 @@ warnings.filterwarnings('ignore')
 lock = Lock()  # Instantiate a Lock for thread safety.
 
 
-def balanced_sampling(surf_file, protein_file, lig_files, cutoff=4):
+def balanced_sampling(surf_file, protein_file, lig_files, cutoff=4.5):
     """
     Returns a subset of equal positive and negative samples from surface points in `surf_file`, with positive samples
     selected from residues close to the antigen.

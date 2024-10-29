@@ -435,8 +435,9 @@ class Featurizer():
 
 
         #### ADD FORCE FIELDS ##########
-        user = os.getenv('USER')
-        pdb2pqr_software_path = f'/home/{user}/PycharmProjects/phd_tools/pdb2pqr-linux-bin64-2.1.1/pdb2pqr'  # Adjust this path to where pdb2pqr is located on your system        cur_pdb = molecule.title
+        software = 'ParaSurf/pdb2pqr-linux-bin64-2.1.1'
+        project_root = os.path.abspath(os.path.join(os.path.dirname(software), "../../.."))
+        pdb2pqr_software_path = f'{project_root}/{software.split("/")[-1]}/pdb2pqr'  # Adjust this path to where pdb2pqr is located on your system        cur_pdb = molecule.title
         cur_pdb = molecule.title
         ff_names = self.FORCE_FIELDS
 

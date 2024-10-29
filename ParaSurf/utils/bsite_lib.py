@@ -1,9 +1,8 @@
 import numpy as np, re
-from rotation import rotation_quaternion
+from .rotation import rotation_quaternion
 from scipy.cluster.hierarchy import fclusterdata
 from sklearn.cluster import MeanShift
 from numba import jit
-
 
 
 def mol2_reader(mol_file):

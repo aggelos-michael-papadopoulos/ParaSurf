@@ -1,8 +1,8 @@
-import bio_data_featurizer
+from ParaSurf.utils import bio_data_featurizer
 import pybel
-from bsite_lib import Grid
-from rotation import rotation_quaternion
-import numpy as np, time
+from .bsite_lib import Grid
+from .rotation import rotation_quaternion
+import numpy as np
 from scipy import ndimage
 
 
