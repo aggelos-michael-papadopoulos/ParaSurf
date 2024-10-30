@@ -54,11 +54,11 @@ source ~/.bashrc  # or source ~/.zshrc if using zsh
 ```
 
 ## Blind paratope binding site prediction
-Run blind prediction
+Run blind prediction. Download the best model weights for each training scenario from [here](ParaSurf/model_weights/README.md).
+
 ```bash
 python blind_predict.py --receptor "test_blind_prediction/4N0Y_receptor_1.pdb" --model_weights "path/to/model_weights"
 ```
-Download model weights for each training scenario from [here](ParaSurf/model_weights/README.md)
 
 ## Create Dataset from scratch
 Prepare the dataset from initial .csv files and create ParaSurf features for training.
