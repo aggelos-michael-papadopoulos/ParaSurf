@@ -21,7 +21,7 @@ cd dms
 sudo make install
 ```
 
-Install ParaSurf
+Install **ParaSurf**
 ```bash
 # Install enviroment
 git clone https://github.com/aggelos-michael-papadopoulos/ParaSurf.git 
