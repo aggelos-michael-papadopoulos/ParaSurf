@@ -48,7 +48,7 @@ After completing the above steps, the resulting folder structure should be organ
 ```bash
 ├── test_data
 │   ├── datasets
-│   │   ├── PECAN.samples
+│   │   ├── PECAN_TRAIN.samples
 │   │   ├── PECAN_TRAIN.proteins
 │   │   ├── PECAN_VAL.proteins
 │   │   ├── PECAN_TEST.proteins
