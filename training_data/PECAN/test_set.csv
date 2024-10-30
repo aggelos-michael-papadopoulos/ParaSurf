@@ -2,7 +2,7 @@ pdb_code,Light_chain,Heavy_chain,ag
 1CIC,A,B,D;C
 1IAI,L,H,M;I
 2EIZ,A,B,C
-2LTQ,L,H,D
+2LTQ,A,B,C
 2XRA,L,H,A
 2XWT,B,A,C
 2Y5T,B,A,G;E
@@ -133,7 +133,7 @@ pdb_code,Light_chain,Heavy_chain,ag
 5KJR,L,H,G
 5KN5,E,D,F
 5KVD,L,H,E
-5KVE,L,H,E
+5KVE,L,L,E
 5KVF,L,H,E
 5KVG,L,H,E
 5L6Y,L,H,C

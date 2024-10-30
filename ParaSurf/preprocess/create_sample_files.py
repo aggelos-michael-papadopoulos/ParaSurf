@@ -1,16 +1,8 @@
-#!/usr/bin/env python2
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Jun  3 11:07:19 2019
-
-@author: smylonas
-"""
-
 import os, random
 
-feats_path = '/home/angepapa/PycharmProjects/DeepSurf2.0/test_data/feats/PECAN_22'  # input folder with protein grids (features)
-proteins_file = '/home/angepapa/PycharmProjects/DeepSurf2.0/test_data/datasets/PECAN_TRAIN.proteins'  # input file with a list of proteins (all, train or validation)
-samples_file = '/home/angepapa/PycharmProjects/DeepSurf2.0/test_data/datasets/PECAN_TRAIN.samples'  # output file with respective samples info (class_label + sample_path)
+feats_path = '/home/angepapa/PycharmProjects/DeepSurf2.0/test_data/feats/eraseme_22'  # input folder with protein grids (features)
+proteins_file = '/home/angepapa/PycharmProjects/DeepSurf2.0/test_data/datasets/eraseme.proteins'  # input file with a list of proteins (all, train or validation)
+samples_file = '/home/angepapa/PycharmProjects/DeepSurf2.0/test_data/datasets/eraseme.samples'  # output file with respective samples info (class_label + sample_path)
 seed = 1
 
 with open(proteins_file, 'r') as f:

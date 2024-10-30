@@ -1,7 +1,7 @@
 import time
 import os
 from tqdm import tqdm
-from fix_surfpoints_format_issues import process_surfpoints_directory
+from ParaSurf.utils.fix_surfpoints_format_issues import process_surfpoints_directory
 
 def generate_molecular_surface(input_path, out_path):
     """

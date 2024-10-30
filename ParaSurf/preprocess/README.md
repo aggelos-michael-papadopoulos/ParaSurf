@@ -1,39 +1,19 @@
-# **ParaSurf**
-## **Surface-Based Deep Learning for Paratope-Antigen Interaction Prediction**
+# **Feature Extraction - Preprocessing phase**
 
-ParaSurf is a state-of-the-art surface-based deep learning model for predicting interactions between paratopes and antigens, with outstanding results across three major antibody-antigen benchmarks:
-
-* PECAN 
-* Paragraph Expanded
-* MIPE
-
-![Alt text](images/results.png)
-
-
-## **ParaSurf Graphical Absract**
-![Alt text](images/graphical_abstract.jpg)
-
-
-## INSTALL
-Install the **DMS software** for the surface molecular representation.
+Steps to create the ParaSurf 41x41x41x22 input feature vector.
+### Step 1: Remove ions, ligands and water from the receptor-antibody and then rearrange the atom ids in the PDB structure
 ```bash
-cd dms
-sudo make install
+# cleaning the antibody-antigen complex
+python clean_dataset.py
 ```
 
-Install **ParaSurf**
+### Step 2: Sanity check. Ensure at least 1 antibody heavy atom is within 4.5Å of any antigen heavy atom.
 ```bash
-# Install enviroment
-git clone https://github.com/aggelos-michael-papadopoulos/ParaSurf.git 
-conda create -n ParaSurf python=3.9
-conda activate ParaSurf
-
-# Install the dependencies
-conda install pytorch==2.0.0 torchvision==0.15.0 torchaudio==2.0.0 pytorch-cuda=11.7 -c pytorch -c nvidia
-pip install torchsummary scipy tqdm h5py jsonpickle pandas biopython scikit-learn matplotlib wandb
-conda install -c conda-forge openbabel
-conda install numpy=1.24
+# sanity check
+python check_rec_ant_touch.py
 ```
-
-
-
+### Step 3: Create the training molecular surface for each receptor in the training folder.
+```bash
+# sanity check
+python check_rec_ant_touch.py
+```

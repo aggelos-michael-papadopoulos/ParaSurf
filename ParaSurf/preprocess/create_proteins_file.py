@@ -1,8 +1,8 @@
 import os
 
 # Here we create a .proteins file that has all the proteins==receptors that we are working with.
-features_path = r'/home/angepapa/PycharmProjects/DeepSurf2.0/test_data/pdbs/Paratope_prediction_benchmark/test'
-proteins_file = r'/home/angepapa/PycharmProjects/DeepSurf2.0/test_data/datasets/TEST_PARATOPE.proteins'
+features_path = r'/home/angepapa/PycharmProjects/DeepSurf2.0/test_data/feats/eraseme_22'
+proteins_file = r'/home/angepapa/PycharmProjects/DeepSurf2.0/test_data/datasets/eraseme.proteins'
 
 receptors = []
 

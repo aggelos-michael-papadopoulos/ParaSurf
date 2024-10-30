@@ -19,7 +19,6 @@ class Featurizer:
             self.neigh_radius = 4 + self.grid.radius  # 4 > 2*R_vdw
             # self.neigh_radius = 2*self.grid.radius  # 4 > 2*R_vdw
 
-    # TODO jit that code
     def _get_protrusion(self, centers, coords):
         if self.speedup:
             sampled_centers = np.resize(centers, (self.grid.gridSize, self.grid.gridSize, self.grid.gridSize, 3))

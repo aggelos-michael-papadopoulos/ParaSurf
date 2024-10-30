@@ -1,6 +1,6 @@
-from remove_hydrogens_from_pdb import remove_hydrogens_from_pdb_folder
-from remove_HETATMS_from_receptors import remove_hetatm_from_pdb_folder
-from reaarange_atom_id import process_pdb_files_in_folder
+from ParaSurf.utils.remove_hydrogens_from_pdb import remove_hydrogens_from_pdb_folder
+from ParaSurf.utils.remove_HETATMS_from_receptors import remove_hetatm_from_pdb_folder
+from ParaSurf.utils.reaarange_atom_id import process_pdb_files_in_folder
 
 
 def clean_dataset(dataset_path_with_pdbs):
