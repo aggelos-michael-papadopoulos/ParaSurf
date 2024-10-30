@@ -15,7 +15,7 @@ def remove_hetatm_from_pdb_folder(input_folder, output_folder):
 
     # List all PDB files in the input directory
     for filename in os.listdir(input_folder):
-        if 'receptor' in filename:  # delete the HETATMS only on the receptor
+        if 'receptor_1.pdb' in filename:  # delete the HETATMS only on the receptor
             pdb_file_path = os.path.join(input_folder, filename)
             output_file_path = os.path.join(output_folder, filename)
             remove_hetatm_lines(pdb_file_path, output_file_path)

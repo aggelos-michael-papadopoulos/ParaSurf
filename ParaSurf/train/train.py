@@ -23,7 +23,7 @@ CFG = {
     'grid': 41, # don't change
     'seed': 42,
     'wandb': False,
-    'debug': True,
+    'debug': False,
     'model_weights': None,  # if ('' or None )is given then training starts from scratch
     'num_workers': 8,
     'feat_type': ['kalasanty_with_force_fields'],
@@ -35,7 +35,7 @@ CFG = {
 }
 
 if CFG['wandb']:
-    wandb.init(project='ParaSurf', entity='angepapa', config=CFG, name=CFG['name'])
+    wandb.init(project='ParaSurf', entity='your_project_name', config=CFG, name=CFG['name'])
 
 
 # Set random seed for repeatability

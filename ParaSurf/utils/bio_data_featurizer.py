@@ -435,9 +435,32 @@ class Featurizer():
 
 
         #### ADD FORCE FIELDS ##########
-        software = 'ParaSurf/pdb2pqr-linux-bin64-2.1.1'
-        project_root = os.path.abspath(os.path.join(os.path.dirname(software), "../../.."))
-        pdb2pqr_software_path = f'{project_root}/{software.split("/")[-1]}/pdb2pqr'  # Adjust this path to where pdb2pqr is located on your system        cur_pdb = molecule.title
+        # Define the relative path to `pdb2pqr` based on the repository root
+        def get_pdb2pqr_path():
+            # Get the directory of the current script
+            script_dir = os.path.dirname(os.path.abspath(__file__))
+
+            # Try locating `pdb2pqr` by going up directory levels
+            possible_root_paths = [
+                os.path.join(script_dir, '..'),  # For blind_predict.py
+                os.path.join(script_dir, '../..'),  # For ParaSurf/preprocess scripts
+            ]
+
+            for root in possible_root_paths:
+                pdb2pqr_path = os.path.abspath(os.path.join(root, 'pdb2pqr-linux-bin64-2.1.1', 'pdb2pqr'))
+                if os.path.isfile(pdb2pqr_path):
+                    return pdb2pqr_path
+
+            # If not found, raise an error
+            raise FileNotFoundError("pdb2pqr executable not found in expected directories.")
+
+        # Usage in the code
+        pdb2pqr_software_path = get_pdb2pqr_path()
+
+        # Ensure the path is valid
+        if not os.path.isfile(pdb2pqr_software_path):
+            raise FileNotFoundError(f"pdb2pqr not found at {pdb2pqr_software_path}")
+
         cur_pdb = molecule.title
         ff_names = self.FORCE_FIELDS
 

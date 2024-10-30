@@ -1,5 +1,5 @@
 from ParaSurf.utils import bio_data_featurizer
-from utils import rotation
+from ParaSurf.train.utils import rotation
 import numpy as np
 
 

@@ -1,7 +1,7 @@
 import os, numpy as np
 import shutil
 import pybel
-from utils import simplify_dms
+from ParaSurf.train.utils import simplify_dms
 from ParaSurf.utils.fix_surfpoints_format_issues import process_surfpoints_directory
 
 
