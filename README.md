@@ -31,6 +31,7 @@ conda activate ParaSurf
 ```
 
 Install **ParaSurf**.
+
 ```bash
 # Install PyTorch with CUDA support
 conda install pytorch==2.0.0 torchvision==0.15.0 torchaudio==2.0.0 pytorch-cuda=11.7 -c pytorch -c nvidia
@@ -51,6 +52,7 @@ nano ~/.bashrc  # or nano ~/.zshrc if you use zsh
 export PYTHONPATH=$PYTHONPATH:/your/path/to/ParaSurf  # change the path to yours
 source ~/.bashrc  # or source ~/.zshrc if using zsh
 ```
+
 ## Blind binding site prediction
 
 

@@ -34,3 +34,4 @@ After running these scripts, you will find a test_data/pdbs folder organized as 
 └── MIPE    
     ├── TRAIN_VAL
     └── TEST
+```

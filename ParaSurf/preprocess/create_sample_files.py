@@ -1,8 +1,11 @@
 import os, random
 
-feats_path = '/home/angepapa/PycharmProjects/DeepSurf2.0/test_data/feats/eraseme_22'  # input folder with protein grids (features)
-proteins_file = '/home/angepapa/PycharmProjects/DeepSurf2.0/test_data/datasets/eraseme.proteins'  # input file with a list of proteins (all, train or validation)
-samples_file = '/home/angepapa/PycharmProjects/DeepSurf2.0/test_data/datasets/eraseme.samples'  # output file with respective samples info (class_label + sample_path)
+
+user = os.getenv('USER')
+
+feats_path = f'/home/{user}/PycharmProjects/github_projects/ParaSurf/test_data/feats/eraseme_22'  # input folder with protein grids (training features)
+proteins_file = f'/home/{user}/PycharmProjects/github_projects/ParaSurf/test_data/datasets/eraseme_TRAIN.proteins'  # input file with a list of train proteins
+samples_file = f'/home/{user}/PycharmProjects/github_projects/ParaSurf/test_data/datasets/eraseme.samples'  # output file with respective training samples info (class_label + sample_path)
 seed = 1
 
 with open(proteins_file, 'r') as f:

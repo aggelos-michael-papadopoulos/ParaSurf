@@ -3,7 +3,6 @@ from multiprocessing import Lock
 import time, os
 import numpy as np
 from Bio.PDB.PDBParser import PDBParser
-# from ..utils.bsite_lib import readSurfpoints, readSurfpoints_with_residues, dist_point_from_lig
 from ParaSurf.utils.bsite_lib import readSurfpoints, readSurfpoints_with_residues, dist_point_from_lig
 from ParaSurf.utils.features import KalasantyFeaturizer, KalasantyFeaturizer_with_force_fields
 from scipy import sparse
@@ -174,7 +173,7 @@ gridSize = 41  # size of grid (16x16x16)
 voxelSize = 1  # size of voxel, e.g. 1 angstrom, if 2A we lose details, so leave it to 1
 cutoff = 4.5     # cutoff threshold in Armstrong's 6 for general PPIs, 4.5 for antibody antigen databases
 feature_vector_length_tmp_path = '/tmp/feature_vector_length.txt'
-# feat_type = 'kalasanty'  # select featurizer (leave it as it is)
+# feat_type = 'kalasanty'  # select featurizer
 feat_type = 'kalasanty_with_force_fields'
 add_atoms_radius_ff_features = True    # If you want to add the atom radius features that correspond to the force fields
 rotate_grid = True  # whether to rotate the grid (leave it as it is)
@@ -182,9 +181,10 @@ use_protrusion = False  # ignore
 protr_radius = 10  # ignore
 protonate = True  # if protein pdbs are not protonated (do not have Hydrogens) set it to True
 
-pdbs_path = '/home/angepapa/PycharmProjects/DeepSurf2.0/test_data/pdbs/eraseme'  # input folder with protein pdbs
-surf_path = '/home/angepapa/PycharmProjects/DeepSurf2.0/test_data/surf_points/eraseme'  # input folder with surface points
-feats_path = f'/home/angepapa/PycharmProjects/DeepSurf2.0/test_data/feats/eraseme'  # SOS leave the last "_" ... output folder with samples per protein
+user = os.getenv('USER')
+pdbs_path = f'/home/{user}/PycharmProjects/github_projects/ParaSurf/test_data/pdbs/eraseme/TRAIN'  # input folder with protein pdbs for training
+surf_path = f'/home/{user}/PycharmProjects/github_projects/ParaSurf/test_data/surfpoints/eraseme/TRAIN'  # input folder with surface points for training
+feats_path = f'/home/{user}/PycharmProjects/github_projects/ParaSurf/test_data/feats/eraseme'  # training features folder
 
 
 if not os.path.exists(feats_path):

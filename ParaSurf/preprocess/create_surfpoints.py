@@ -43,8 +43,9 @@ def generate_molecular_surface(input_path, out_path):
 
 # Example usage
 if __name__ == '__main__':
-    pdbs_path = '/home/angepapa/PycharmProjects/DeepSurf2.0/test_data/pdbs/PECAN/TEST'
-    surfpoints_path = '/home/angepapa/PycharmProjects/DeepSurf2.0/test_data/surf_points/PECAN/TEST'
+    user = os.getenv('USER')
+    pdbs_path = f'/home/{user}/PycharmProjects/github_projects/ParaSurf/test_data/pdbs/eraseme/TRAIN'  # input folder with protein pdbs for training
+    surfpoints_path =f'/home/{user}/PycharmProjects/github_projects/ParaSurf/test_data/surfpoints/eraseme/TRAIN'
 
     # create the molecular surface
     generate_molecular_surface(

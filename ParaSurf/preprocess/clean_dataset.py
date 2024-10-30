@@ -1,3 +1,4 @@
+import os
 from ParaSurf.utils.remove_hydrogens_from_pdb import remove_hydrogens_from_pdb_folder
 from ParaSurf.utils.remove_HETATMS_from_receptors import remove_hetatm_from_pdb_folder
 from ParaSurf.utils.reaarange_atom_id import process_pdb_files_in_folder
@@ -22,4 +23,5 @@ def clean_dataset(dataset_path_with_pdbs):
     process_pdb_files_in_folder(folder_path=data_path)
 
 if __name__ == "__main__":
-    clean_dataset('/home/angepapa/PycharmProjects/DeepSurf2.0/test_data/pdbs/PECAN/TRAIN')
+    user = os.getenv('USER')
+    clean_dataset(f'/home/{user}/PycharmProjects/github_projects/ParaSurf/test_data/pdbs/eraseme')
