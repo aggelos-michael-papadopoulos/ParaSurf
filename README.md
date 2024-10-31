@@ -49,9 +49,9 @@ conda install numpy=1.24
 
 Add ParaSurf to PYTHONPATH
 ```bash
-nano ~/.bashrc  # or nano ~/.zshrc if you use zsh
+nano ~/.bashrc  
 export PYTHONPATH=$PYTHONPATH:/your/path/to/ParaSurf  # change the path to yours
-source ~/.bashrc  # or source ~/.zshrc if using zsh
+source ~/.bashrc  
 ```
 
 ## **Blind paratope binding site prediction**
