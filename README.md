@@ -53,8 +53,8 @@ export PYTHONPATH=$PYTHONPATH:/your/path/to/ParaSurf  # change the path to yours
 source ~/.bashrc  # or source ~/.zshrc if using zsh
 ```
 
-## Blind paratope binding site prediction
-Run blind prediction. Download the best model weights for each training scenario from [here](ParaSurf/model_weights/README.md).
+## **Blind paratope binding site prediction**
+Run blind binding-site prediction. Download the best model weights for each training scenario from [here](ParaSurf/model_weights/README.md).
 
 ```bash
 python blind_predict.py --receptor "test_blind_prediction/4N0Y_receptor_1.pdb" --model_weights "path/to/model_weights"
