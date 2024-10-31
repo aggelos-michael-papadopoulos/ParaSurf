@@ -153,9 +153,9 @@ class Featurizer():
             #                     'partialcharge'] # without  , 'implicitvalence', 'exactmass'
 
             self.NAMED_PROPS = ['hyb', 'heavydegree', 'heterodegree',
-                                'partialcharge']# without  , 'implicitvalence', 'exactmass'                 # for openbabel 3.1.1
+                                'partialcharge']   # without  , 'implicitvalence', 'exactmass'                 # for openbabel 3.1.1
 
-            self.FORCE_FIELDS = ['AMBER','PARSE'] # 'AMBER', 'CHARMM', 'PARSE', 'PEOEPB', 'SWANSON', 'TYL06'
+            self.FORCE_FIELDS = ['AMBER','PARSE']  # 'AMBER', 'CHARMM', 'PARSE', 'PEOEPB', 'SWANSON', 'TYL06'
         self.FEATURE_NAMES += self.NAMED_PROPS
 
         if add_force_fields:
