@@ -26,12 +26,6 @@ git clone https://github.com/aggelos-michael-papadopoulos/ParaSurf.git
 conda create -n ParaSurf python=3.9
 conda activate ParaSurf
 ```
-Install the **DMS software** for the surface molecular representation.
-```bash
-cd dms
-sudo make install
-cd ..
-```
 
 Install **ParaSurf**
 
@@ -54,6 +48,12 @@ Add ParaSurf to PYTHONPATH
 nano ~/.bashrc  
 export PYTHONPATH=$PYTHONPATH:/your/path/to/ParaSurf  # change the path to yours
 source ~/.bashrc  
+```
+Install the **DMS software** for the surface molecular representation.
+```bash
+cd dms
+sudo make install
+cd ..
 ```
 
 ## **Blind paratope binding site prediction**
