@@ -16,11 +16,7 @@ ParaSurf is a state-of-the-art surface-based deep learning model for predicting 
 
 
 ## Installation
-Install the **DMS software** for the surface molecular representation.
-```bash
-cd dms
-sudo make install
-```
+
 Setup the **Environment**
 ```bash
 # Clone ParaSurf repository
@@ -29,6 +25,12 @@ git clone https://github.com/aggelos-michael-papadopoulos/ParaSurf.git
 # Create and activate conda environment
 conda create -n ParaSurf python=3.9
 conda activate ParaSurf
+```
+Install the **DMS software** for the surface molecular representation.
+```bash
+cd dms
+sudo make install
+cd ..
 ```
 
 Install **ParaSurf**
