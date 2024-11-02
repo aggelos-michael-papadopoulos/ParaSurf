@@ -62,7 +62,7 @@ Run blind binding-site prediction. Download the best model weights for each trai
 ```bash
 python blind_predict.py --receptor "test_blind_prediction/4N0Y_receptor_1.pdb" --model_weights "path/to/model_weights"
 ```
-![Alt text](images/pred_transparent2.png)
+![Alt text](images/pred.png)
 
 
 ## Create Dataset from scratch
