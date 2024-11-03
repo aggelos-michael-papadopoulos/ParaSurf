@@ -3,7 +3,7 @@ from sklearn.cluster import MeanShift
 
 
 class Bsite_extractor():
-    def __init__(self,lig_thres=0.9,bw=15):
+    def __init__(self, lig_thres=0.9, bw=15):
         self.T = lig_thres
         self.ms = MeanShift(bandwidth=bw,bin_seeding=True,cluster_all=False,n_jobs=4)
     

@@ -16,10 +16,6 @@ class Network:
             self.device = torch.device("cpu")
 
         # load model
-        # self.model = resnet_3d.resnet_v1_18(num_classes=1)
-        # self.model = resnet_3d_family.ResNet50().to(device)          #TODO CHANGE THAT --> COMMENT
-        # self.model = mobile_vit_3D.mobilevit3d_xxs().to(device)
-        # self.model = resnet_transformer_3d_family.CNNTransformerClassifier().to(device)
         self.model = ParaSurf_model.ResNet3D_Transformer(in_channels=feature_channels, block=ParaSurf_model.DilatedBottleneck,
                                                           num_blocks=[3, 4, 6, 3], num_classes=1)
 

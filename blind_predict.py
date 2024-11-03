@@ -55,13 +55,13 @@ lig_scores_only_receptor_atoms = np.array([lig_scores[i] for i in only_receptor_
 # Extract residues and residues_best from receptor_info
 residues, residues_best = receptor_info(receptor, lig_scores_only_receptor_atoms)
 
-# Write residue-level prediction PDB
+# Write residue-level prediction PDB: Residue-level prediction
 write_residue_prediction_pdb(receptor, results_save_path, residues_best)
 
-# Write per-atom prediction PDB
+# Write per-atom prediction PDB: Per atom level prediction
 write_atom_prediction_pdb(receptor, results_save_path, lig_scores_only_receptor_atoms)
 
-# Extract Binding Sites
+# Extract Binding Sites: Pocket.pdb file
 extractor = Bsite_extractor()
 extractor.extract_bsites(prot, lig_scores)
 

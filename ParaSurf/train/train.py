@@ -8,7 +8,7 @@ from torch.utils.data import DataLoader
 from torch.optim.lr_scheduler import StepLR
 from ParaSurf.model import ParaSurf_model
 from ParaSurf.model.dataset import dataset
-from validation import validate_residue_level #(CHANGE TO validation_CDR (new!)
+from validation import validate_residue_level
 import wandb
 from tqdm import tqdm
 
@@ -50,14 +50,12 @@ def set_seed(seed_value):
 
 set_seed(CFG['seed'])
 
-# model
-device = 'cuda' if torch.cuda.is_available() else 'cpu'
-
-
 with open(CFG['TRAIN_samples']) as f:
     lines = f.readlines()
     feature_vector_lentgh = int(lines[0].split()[1].split('/')[0].split('_')[-1])
 
+# model
+device = 'cuda' if torch.cuda.is_available() else 'cpu'
 model = ParaSurf_model.ResNet3D_Transformer(in_channels=feature_vector_lentgh,
                                                   block=ParaSurf_model.DilatedBottleneck,
                                                   num_blocks=[3, 4, 6, 3], num_classes=1).to(device)

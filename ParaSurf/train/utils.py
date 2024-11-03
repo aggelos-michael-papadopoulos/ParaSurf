@@ -180,6 +180,9 @@ def rotation(n):
 
 
 def TP_TN_FP_FN_visualization2pdb(gt_binding_site_coordinates, lig_scores, to_save_path, gt_indexes):
+    '''
+    Create dummy PDB files to visualize the results (TP, TN, FP, FN) on the receptor PDB file
+    '''
     threshold = 0.5
 
     # Initialize lists

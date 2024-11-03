@@ -27,7 +27,7 @@ def validate_residue_level(valset, modelweights, test_folder, epoch, feat_type, 
         'dist_cutoff': 4.5,                     # Armstrong threshold
         'prediction_threshold': 0.5,            # 0,734 for Expanded_dataset
         'Grid_size': 41,                        # size of the voxel
-        'test_csv': '/home/angepapa/PycharmProjects/github_projects/ParaSurf/training_data/PECAN/test_set.csv',  # ('' or None ) give only the path only if you want to inspect inside each cdr loop CDRH1,H2, H3,L1,L2, L3 and the Framework.
+        'test_csv': '',  # ('' or None ) give only the .csv path only if you want to inspect inside each cdr loop CDRH1,H2, H3,L1,L2, L3 and the Framework.
         'feature_channels': feature_vector_lentgh,
         'residue_score_metric': "max",          # "mean" or "max";calculate the max or the average scores of all the atoms of the residue, else take the maximum
         'add_atoms_radius_ff_features': True,   # careful here
@@ -133,19 +133,13 @@ def validate_residue_level(valset, modelweights, test_folder, epoch, feat_type, 
         # find the indexes of all the receptor atoms and the true_label atoms from the surfpoints
         # it is the index mapping procedure
         only_receptor_atoms_indexes = []
-        # gt_res_indexes = []         # we do not care about these indexes
         atom_id = 0
         with open(surf_file, 'r') as file:
             for line in file:
                 parts = line.split()
-                cur_res_id = parts[1]
-                # x, y, z = float(parts[3]), float(parts[4]), float(parts[5])
                 # check for gt_residues
                 if parts[6] == 'A':
                     only_receptor_atoms_indexes.append(atom_id)
-                # if cur_res_id in gt_true_label_residues:
-                #     gt_res_indexes.append(atom_id)          # we do not really need this info since we calculating the gt_indexes below
-
                 atom_id += 1
 
         # Get Ligandability Scores
@@ -197,7 +191,7 @@ def validate_residue_level(valset, modelweights, test_folder, epoch, feat_type, 
                 true_labels_residue[j] = 1
                 gt_indexes.append(j)
 
-        ################## RESULTS ##############################################
+        ################## RESULTS ##################
         # Predicted labels based on a threshold (e.g., 0.5). Adjust as needed.
         predicted_scores = np.array([[i[1]['scores']] for i in residues_best.items()])
         predicted_labels = (predicted_scores > CFG_predict['prediction_threshold']).astype(int)
@@ -228,7 +222,7 @@ def validate_residue_level(valset, modelweights, test_folder, epoch, feat_type, 
 
         calculate_TP_TN_FP_FN(predicted_scores, gt_indexes)
 
-        # Extract Binding Sites
+        # Extract Binding Sites "pocket.pdb file"
         extractor = Bsite_extractor()
         extractor.extract_bsites(prot, lig_scores)
 
@@ -254,7 +248,6 @@ def validate_residue_level(valset, modelweights, test_folder, epoch, feat_type, 
     avg_mcc = np.mean(mcc_values)
     cauroc = np.median(auc_roc_values)
 
-    # todo erase the print after testing
     print(f'------------- results for epoch {epoch} -------------\n'
           f'AUC-ROC: {avg_auc_roc}\n'
           f'accuracy: {avg_accuracy}\n'

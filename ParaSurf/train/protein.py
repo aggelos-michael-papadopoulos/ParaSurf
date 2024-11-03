@@ -18,11 +18,7 @@ class Protein_pred:
         self.mol = next(pybel.readfile(prot_file.split('.')[-1], prot_file))
         self.atom_points_thresh = atom_points_threshold
 
-        # surfpoints_file_init = os.path.join(self.save_path,prot_id+'.surfpoints')
         surfpoints_file = os.path.join(self.save_path, prot_id + '.surfpoints')
-
-
-        # shutil.copy2(surfpoints_file, os.path.join(self.save_path, prot_id + '.surfpoints')) #we dont need this line
 
         # we have all the surfpoints ready from the preprocessing step
         if not os.path.exists(surfpoints_file):
@@ -32,10 +28,6 @@ class Protein_pred:
             process_surfpoints_directory(self.save_path)
             # raise Exception('probably DMS not installed')
 
-        # process_surfpoints_file(surfpoints_file_old, surfpoints_file)
-        # adjust_surfpoints_protein_wide(surfpoints_file_init, surfpoints_file, reduct_distance=1)
-
-        # os.remove(surfpoints_file_init)
         # locate surface: if we want the final coordinates to have the receptor atoms or we want just the surface atoms
         self.surf_points, self.surf_normals = simplify_dms(surfpoints_file, seed=seed,
                                                            locate_surface=locate_only_surface)
