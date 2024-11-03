@@ -3,8 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torchsummary import summary
 import time
-from torchviz import make_dot
-from torchinfo  import summary
+
 
 class GeM(nn.Module):
     def __init__(self, p=3.0, eps=1e-6):
