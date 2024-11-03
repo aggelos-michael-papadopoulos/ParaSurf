@@ -37,13 +37,13 @@ def remove_empty_features(feats_folder, pdbs_path, surf_path, log_file_path="rem
                 surf_file = os.path.join(surf_path, pdb_code + '_receptor_1.surfpoints')
 
                 # Remove the empty folder and associated files
-                # os.rmdir(path)
-                # if os.path.exists(rec_file):
-                #     os.remove(rec_file)
-                # if os.path.exists(antigen_file):
-                #     os.remove(antigen_file)
-                # if os.path.exists(surf_file):
-                #     os.remove(surf_file)
+                os.rmdir(path)
+                if os.path.exists(rec_file):
+                    os.remove(rec_file)
+                if os.path.exists(antigen_file):
+                    os.remove(antigen_file)
+                if os.path.exists(surf_file):
+                    os.remove(surf_file)
 
                 # Log each removal
                 log_file.write(f"{pdb_code} complex removed since no features found.\n")
