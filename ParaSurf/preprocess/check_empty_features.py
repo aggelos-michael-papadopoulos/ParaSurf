@@ -61,7 +61,8 @@ def remove_empty_features(feats_folder, pdbs_path, surf_path, log_file_path="rem
 
 # Example usage
 if __name__ == '__main__':
-    pdbs_path = '/home/angepapa/PycharmProjects/DeepSurf2.0/test_data/pdbs/eraseme'
-    surf_path = '/home/angepapa/PycharmProjects/DeepSurf2.0/test_data/surf_points/PECAN/TRAIN'
-    feats_path = '/home/angepapa/PycharmProjects/DeepSurf2.0/test_data/feats/eraseme22'
+    user = os.getenv('USER')
+    pdbs_path = f'/home/{user}/PycharmProjects/github_projects/ParaSurf/test_data/pdbs/eraseme/TRAIN'
+    surf_path = f'/home/{user}/PycharmProjects/github_projects/ParaSurf/test_data/surf_points/eraseme/TRAIN'
+    feats_path = f'/home/{user}/PycharmProjects/github_projects/ParaSurf/test_data/feats/eraseme_22'
     remove_empty_features(feats_path, pdbs_path, surf_path)
