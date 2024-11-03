@@ -138,15 +138,6 @@ class ResNet3D_Transformer(nn.Module):
         x = self.transformer_block(x)
         # Global average pooling
         x = torch.mean(x, dim=[2, 3, 4])
-        # Global Max Pooling
-        # x = F.adaptive_max_pool3d(x, (1, 1, 1))
-        # x = x.view(x.size(0), -1)  # Flatten the output
-        # TODO: 1st experiment with Gem pooling, 2nd experiment with Gem + normalize
-        # x = self.gem_pooling(x)
-        # x = x.view(x.size(0), -1)  # Flatten the tensor for the linear layer
-        #
-        # Normalize the features
-        # x = F.normalize(x, p=2, dim=1)  # L2 normalization
 
         # Classify
         x = self.dropout(x)  # Apply dropout before classification
@@ -173,11 +164,6 @@ if __name__ == "__main__":
 
     dummy_input = torch.randn(64, grid_size, grid_size, grid_size, num_input_channels).to(device)
     dummy_input = dummy_input.float().to(device)
-    # # Create a dummy input tensor to pass through the network
-    # dummy_input = torch.randn(1, grid_size, grid_size, grid_size, 19).to(device)
-    #
-    # # dummy_input = torch.randn(2, num_input_channels, grid_size, grid_size, grid_size).to(device)
-    # dummy_input = dummy_input.permute(0, 4, 3, 2, 1)
 
 
     output = model(dummy_input)
@@ -185,10 +171,4 @@ if __name__ == "__main__":
     print("Output shape:", output.shape)
     print(output)
     print(f'total time: {(time.time() - start)/60} mins')
-
-    # Generate a graph of the model's architecture
-    # dot = make_dot(output, params=dict(model.named_parameters()))
-
-    # Save the graph as a PDF
-    # dot.render("model_architecture", format="pdf")
 
