@@ -74,7 +74,7 @@ python ParaSurf/train/validation.py
 # TODO:
 - [x] Upload final weights to repository
 - [x] Upload requirements file for the ParaSurf environment
-- [ ] Create Hugging Face demo
+- [ ] Create web-demo
 
 # Citation
 coming soon ...
