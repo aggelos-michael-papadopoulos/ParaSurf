@@ -23,7 +23,7 @@ Setup the **Environment**
 git clone https://github.com/aggelos-michael-papadopoulos/ParaSurf.git 
 
 # Create and activate conda environment
-conda create -n ParaSurf python=3.9
+conda create -n ParaSurf python=3.9 -y
 conda activate ParaSurf
 ```
 
