@@ -21,26 +21,12 @@ Setup the **Environment**
 ```bash
 # Clone ParaSurf repository
 git clone https://github.com/aggelos-michael-papadopoulos/ParaSurf.git 
-
-# Create and activate conda environment
 conda create -n ParaSurf python=3.9 -y
 conda activate ParaSurf
-```
-
-Install **ParaSurf**
-
-```bash
-# Install PyTorch with CUDA support
-conda install pytorch==2.0.0 torchvision==0.15.0 torchaudio==2.0.0 pytorch-cuda=11.7 -c pytorch -c nvidia
-
-# Install additional Python packages
-pip install torchsummary scipy tqdm h5py jsonpickle pandas biopython scikit-learn matplotlib wandb
+pip install -r requirements.txt
 
 # Install OpenBabel for chemical data processing
 conda install -c conda-forge openbabel
-
-# Install specific Numpy version
-conda install numpy=1.24
 ```
 
 Add ParaSurf to PYTHONPATH
@@ -86,6 +72,7 @@ python ParaSurf/train/validation.py
 
 # TODO:
 - [x] Upload final weights to repository
+- [x] Upload requirements file for the ParaSurf enviroment
 - [ ] Create Hugging Face demo
 
 # Citation

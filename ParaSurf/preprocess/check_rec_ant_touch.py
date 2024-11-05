@@ -84,6 +84,6 @@ def check_receptor_antigen_interactions(pdb_dir, distance_cutoff=6, log_file="in
 # example usage
 if __name__ == '__main__':
     user = os.getenv('USER')
-    pdb_dir = f'/home/{user}/PycharmProjects/github_projects/ParaSurf/test_data/pdbs/eraseme'
+    pdb_dir = f'/home/{user}/PycharmProjects/github_projects/ParaSurf/test_data/pdbs/eraseme/TRAIN'
     index = pdb_dir.split('/')[-1]
     check_receptor_antigen_interactions(pdb_dir, distance_cutoff=4.5, log_file=f'{pdb_dir}/{index}_interaction_issues.txt')
