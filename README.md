@@ -23,6 +23,7 @@ Setup the **Environment**
 git clone https://github.com/aggelos-michael-papadopoulos/ParaSurf.git 
 conda create -n ParaSurf python=3.10 -y
 conda activate ParaSurf
+cd ParaSurf
 pip install -r requirements.txt
 
 # Install OpenBabel for chemical data processing
