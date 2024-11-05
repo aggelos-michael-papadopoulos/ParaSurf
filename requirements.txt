@@ -14,3 +14,4 @@ biopython
 scikit-learn
 matplotlib
 wandb
+openbabel==2.4.1

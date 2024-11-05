@@ -1,8 +1,8 @@
 import jsonpickle
 import os, re
 import numpy as np
-# import pybel
-from openbabel import pybel
+import pybel
+# from openbabel import pybel
 from math import ceil, sin, cos, sqrt, pi
 from itertools import combinations
 import collections
@@ -148,12 +148,12 @@ class Featurizer():
             self.NAMED_PROPS = named_properties
             self.FORCE_FIELDS = named_properties
         else:
-            # # pybel.Atom properties to save
-            # self.NAMED_PROPS = ['hyb', 'heavyvalence', 'heterovalence',
-            #                     'partialcharge'] # without  , 'implicitvalence', 'exactmass'
-
-            self.NAMED_PROPS = ['hyb', 'heavydegree', 'heterodegree',
-                                'partialcharge']   # without  , 'implicitvalence', 'exactmass'                 # for openbabel 3.1.1
+            # pybel.Atom properties to save
+            self.NAMED_PROPS = ['hyb', 'heavyvalence', 'heterovalence',
+                                'partialcharge'] # without  , 'implicitvalence', 'exactmass'                 # for openbabel 2.4.1
+            #
+            # self.NAMED_PROPS = ['hyb', 'heavydegree', 'heterodegree',
+            #                     'partialcharge']   # without  , 'implicitvalence', 'exactmass'                 # for openbabel 3.1.1
 
             self.FORCE_FIELDS = ['AMBER','PARSE']  # 'AMBER', 'CHARMM', 'PARSE', 'PEOEPB', 'SWANSON', 'TYL06'
         self.FEATURE_NAMES += self.NAMED_PROPS
