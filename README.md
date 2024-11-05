@@ -85,9 +85,7 @@ python ParaSurf/train/validation.py
 ```
 
 # TODO:
-- [x] Complete feature extraction step
 - [x] Upload final weights to repository
-- [x] Implement model training script
 - [ ] Create Hugging Face demo
 
 # Citation
