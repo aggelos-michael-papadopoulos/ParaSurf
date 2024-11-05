@@ -21,12 +21,12 @@ Setup the **Environment**
 ```bash
 # Clone ParaSurf repository
 git clone https://github.com/aggelos-michael-papadopoulos/ParaSurf.git 
-conda create -n ParaSurf python=3.9 -y
+conda create -n ParaSurf python=3.10 -y
 conda activate ParaSurf
 pip install -r requirements.txt
 
 # Install OpenBabel for chemical data processing
-conda install -c conda-forge openbabel
+conda install -c conda-forge openbabel -y
 ```
 
 Add ParaSurf to PYTHONPATH
@@ -72,7 +72,7 @@ python ParaSurf/train/validation.py
 
 # TODO:
 - [x] Upload final weights to repository
-- [x] Upload requirements file for the ParaSurf enviroment
+- [x] Upload requirements file for the ParaSurf environment
 - [ ] Create Hugging Face demo
 
 # Citation
