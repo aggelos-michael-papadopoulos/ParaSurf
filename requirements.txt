@@ -1,6 +1,7 @@
 torch==2.1.2
 numpy==1.26.4
 torchvision
+gradio
 transformers==4.42.4
 torchsummary
 scipy
