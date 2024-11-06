@@ -13,4 +13,5 @@ biopython
 scikit-learn
 matplotlib
 wandb
+gradio
 #openbabel==2.4.1
