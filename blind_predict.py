@@ -14,7 +14,7 @@ warnings.filterwarnings('ignore')
 parser = argparse.ArgumentParser(description="Run blind prediction using ParaSurf.")
 parser.add_argument('--receptor', type=str, required=True, help="Path to the receptor (antibody or paratope) PDB file.")
 parser.add_argument('--model_weights', type=str, required=True, help="Path to the model weights file.")
-parser.add_argument('--mesh_dense', type=float, default=0.3, help="Density for mesh generation (0.1 to 1.0).")
+parser.add_argument('--mesh_dense', type=float, default=0.3, help="Density for mesh generation of the protein's surface representation '.surfpoints' file (0.1 to 1.0).")
 parser.add_argument('--device', type=str, default='cuda', choices=['cuda', 'cpu'], help="Device to use for computation: 'cuda' or 'cpu'.")
 args = parser.parse_args()
 
