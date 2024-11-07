@@ -14,7 +14,11 @@ warnings.filterwarnings('ignore')
 parser = argparse.ArgumentParser(description="Run blind prediction using ParaSurf.")
 parser.add_argument('--receptor', type=str, required=True, help="Path to the receptor (antibody or paratope) PDB file.")
 parser.add_argument('--model_weights', type=str, required=True, help="Path to the model weights file.")
+parser.add_argument('--mesh_dense', type=float, default=0.3, help="Density for mesh generation (0.1 to 1.0).")
 args = parser.parse_args()
+
+if not (0.1 <= args.mesh_dense <= 1.0):
+    raise ValueError("mesh_dense must be between 0.1 and 1")
 
 CFG_blind_pred = {
     'batch_size': 64,
@@ -24,16 +28,17 @@ CFG_blind_pred = {
     'device': 'cuda',  # cuda or cpu
 }
 
-# Use command-line arguments for receptor and model_weights paths
+# Use command-line arguments for receptor, model_weights paths, and mesh_dense
 receptor = args.receptor
 model_weights = args.model_weights
+mesh_dense = args.mesh_dense
 results_save_path = f"{os.path.dirname(receptor)}/{os.path.basename(receptor).split('.')[0]}"
 
 # Clean the dataset
 clean_dataset(os.path.dirname(receptor))
 
-# Process the protein
-prot = Protein_pred(receptor, save_path=os.path.dirname(receptor))
+# Process the protein with specified mesh_dense
+prot = Protein_pred(receptor, save_path=os.path.dirname(receptor), mesh_dense=mesh_dense)
 
 # Locate the surfpoints file
 surf_file = os.path.join(prot.save_path, [i for i in os.listdir(prot.save_path) if 'surfpoints' in i][0])

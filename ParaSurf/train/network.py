@@ -8,7 +8,7 @@ from ParaSurf.model import ParaSurf_model
 
 class Network:
     def __init__(self, model_path, gridSize, feature_channels, voxelSize=1, device="cuda"):
-        self.gridSize = gridSize                                   # Does this change?
+        self.gridSize = gridSize
 
         if device == 'cuda' and torch.cuda.is_available():
             self.device = torch.device("cuda")
@@ -20,11 +20,11 @@ class Network:
                                                           num_blocks=[3, 4, 6, 3], num_classes=1)
 
         # load weights
-        self.model.load_state_dict(torch.load(os.path.join(model_path)))
+        self.model.load_state_dict(torch.load(model_path, map_location=self.device)) #
         # model to eval mode and to device
         self.model = self.model.to(self.device).eval()
 
-        self.featurizer = KalasantyFeaturizer(gridSize, voxelSize) # it is the "rules of the game"
+        self.featurizer = KalasantyFeaturizer(gridSize, voxelSize)
         self.feature_channels = feature_channels
         
     def get_lig_scores(self, prot, batch_size, add_forcefields, add_atom_radius_features):

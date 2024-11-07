@@ -67,9 +67,9 @@ def readSurfPoints_with_receptor_atoms(surf_file):
 
     # lines = [l for l in lines if len(l.split()) > 7]
     lines = [l for l in lines]
-    if len(lines) > 100000:
-        warnings.warn('{} has too many points'.format(surf_file))
-        return
+    # if len(lines) > 100000:
+    #     warnings.warn('{} has too many points'.format(surf_file))
+    #     return
     if len(lines) == 0:
         warnings.warn('{} is empty'.format(surf_file))
         return
@@ -379,6 +379,9 @@ def write_residue_prediction_pdb(receptor, results_save_path, residues_best):
     rec_name = receptor.split('/')[-1].split('_')[0]
     output_pdb_path = os.path.join(results_save_path, f'{rec_name}_pred.pdb')
 
+    # Ensure the directory exists
+    os.makedirs(results_save_path, exist_ok=True)
+
     # Open the original receptor PDB file and the output PDB file for writing the predictions
     with open(receptor, 'r') as original_pdb, open(output_pdb_path, 'w') as pred_pdb:
         for line in original_pdb:
@@ -424,6 +427,8 @@ def write_atom_prediction_pdb(receptor, results_save_path, lig_scores_only_recep
 
     rec_name = receptor.split('/')[-1].split('_')[0]
     output_pdb_path = os.path.join(results_save_path, f'{rec_name}_pred_per_atom.pdb')
+
+    os.makedirs(results_save_path, exist_ok=True)
 
     # Make sure the length of lig_scores matches the number of atoms in the PDB
     assert len(lig_scores_only_receptor_atoms) == sum(1 for line in open(receptor) if line.startswith("ATOM") or line.startswith("HETATM")), \

@@ -7,7 +7,7 @@ from ParaSurf.utils.fix_surfpoints_format_issues import process_surfpoints_direc
 
 
 class Protein_pred:
-    def __init__(self, prot_file, save_path, seed=None, atom_points_threshold=5, locate_only_surface=False):
+    def __init__(self, prot_file, save_path, seed=None, mesh_dense=0.3, atom_points_threshold=5, locate_only_surface=False):
 
         prot_id = prot_file.split('/')[-1].split('.')[0]
         self.save_path = os.path.join(save_path, prot_id)
@@ -22,7 +22,7 @@ class Protein_pred:
 
         # we have all the surfpoints ready from the preprocessing step
         if not os.path.exists(surfpoints_file):
-            os.system('dms ' + prot_file + ' -d 0.3 -n -o ' + surfpoints_file)      #default value for d is 0.2
+            os.system('dms ' + prot_file + f' -d {mesh_dense} -n -o ' + surfpoints_file)      #set to 0.1 for fast results
             # fix any format issues
             print('\nfixing surfpoints format ...')
             process_surfpoints_directory(self.save_path)
