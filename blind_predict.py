@@ -15,17 +15,19 @@ parser = argparse.ArgumentParser(description="Run blind prediction using ParaSur
 parser.add_argument('--receptor', type=str, required=True, help="Path to the receptor (antibody or paratope) PDB file.")
 parser.add_argument('--model_weights', type=str, required=True, help="Path to the model weights file.")
 parser.add_argument('--mesh_dense', type=float, default=0.3, help="Density for mesh generation (0.1 to 1.0).")
+parser.add_argument('--device', type=str, default='cuda', choices=['cuda', 'cpu'], help="Device to use for computation: 'cuda' or 'cpu'.")
 args = parser.parse_args()
 
+# Validate the mesh_dense argument
 if not (0.1 <= args.mesh_dense <= 1.0):
-    raise ValueError("mesh_dense must be between 0.1 and 1")
+    raise ValueError("mesh_dense must be between 0.1 and 1.0")
 
 CFG_blind_pred = {
     'batch_size': 64,
     'Grid_size': 41,  # size of the voxel
     'feature_channels': 22,
     'add_atoms_radius_ff_features': True,
-    'device': 'cuda',  # cuda or cpu
+    'device': args.device,  # Use the specified device
 }
 
 # Use command-line arguments for receptor, model_weights paths, and mesh_dense
