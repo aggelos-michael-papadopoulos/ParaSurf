@@ -71,10 +71,14 @@ python ParaSurf/train/train.py
 python ParaSurf/train/validation.py
 ```
 
+## **Try ParaSurf on Hugging Face!** 🤗
+
+We’re excited to share that **ParaSurf** is now live on Hugging Face!  [link](https://huggingface.co/spaces/angepapa/ParaSurf).
+
 # TODO:
 - [x] Upload final weights to repository
 - [x] Upload requirements file for the ParaSurf environment
-- [ ] Create web-demo
+- [x] Create web-demo at Hugging face
 
 # Citation
 coming soon ...
