@@ -60,7 +60,7 @@ Best model weights for the 3 benchmark datasets:
 
 
 ## **Blind paratope binding site prediction**
-Run blind binding-site prediction. Download the best model weights for each training scenario from [here](ParaSurf/model_weights/README.md).
+Run blind binding-site prediction.
 
 ```bash
 python blind_predict.py --receptor "test_blind_prediction/4N0Y_receptor_1.pdb" --model_weights "path/to/model_weights"
