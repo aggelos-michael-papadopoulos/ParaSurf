@@ -3,6 +3,7 @@
 
 ParaSurf is a state-of-the-art surface-based deep learning model for predicting interactions between paratopes and antigens, with outstanding results across three major antibody-antigen benchmarks:
 
+---
 🚀 **Try [ParaSurf](https://huggingface.co/spaces/angepapa/ParaSurf) on 🤗 Hugging Face now!!!**  
 **Explore real-time predictions and visualize model outputs interactively!**
 
