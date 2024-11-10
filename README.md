@@ -98,5 +98,9 @@ python ParaSurf/train/validation.py
 - [x] Upload requirements file for the ParaSurf environment
 - [x] Create web-demo at Hugging face
 
+# Contacts
+For any issues or questions, please don't hesitate to reach out: [angepapa@iti.gr](mailto:angepapa@iti.gr)
+
+
 # Citation
 coming soon ...
