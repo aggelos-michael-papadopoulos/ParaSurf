@@ -12,12 +12,12 @@ ParaSurf is a state-of-the-art surface-based deep learning model for predicting 
 * Paragraph Expanded
 * MIPE
 
-![Alt text](images/results.jpg)
+![Model Results](images/results.jpg)
 
 
-## **ParaSurf Graphical Absract**
-![Alt text](images/ParaSurf.jpg)
-![Alt text](images/model%20architecture.jpg)
+## **ParaSurf Graphical Abstract**
+![ParaSurf](images/ParaSurf.jpg)
+![Architecture](images/model%20architecture.jpg)
 
 
 ## Installation
