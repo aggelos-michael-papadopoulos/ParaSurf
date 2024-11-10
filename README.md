@@ -3,6 +3,10 @@
 
 ParaSurf is a state-of-the-art surface-based deep learning model for predicting interactions between paratopes and antigens, with outstanding results across three major antibody-antigen benchmarks:
 
+🚀 **Try [ParaSurf](https://huggingface.co/spaces/angepapa/ParaSurf) on 🤗 Hugging Face now!!!**  
+**Explore real-time predictions and visualize model outputs interactively!**
+
+
 * PECAN 
 * Paragraph Expanded
 * MIPE
@@ -47,7 +51,7 @@ cd ..
 
 All models are hosted [here](https://drive.google.com/drive/folders/1Kpehru9SnWsl7_Wq93WuI_o7f8wrPgpI?usp=drive_link).
 
-Best model weights for the 3 benchmark datasets:
+Download the best model weights for each benchmark dataset below:
 
 
 | Dataset                                | Weights                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
@@ -60,7 +64,7 @@ Best model weights for the 3 benchmark datasets:
 
 
 ## **Blind paratope binding site prediction**
-Run blind binding-site prediction.
+Run a blind prediction on a receptor file to identify binding sites:
 
 ```bash
 python blind_predict.py --receptor "test_blind_prediction/4N0Y_receptor_1.pdb" --model_weights "path/to/model_weights"
@@ -86,11 +90,6 @@ python ParaSurf/train/train.py
 # Validate to reproduce paper results
 python ParaSurf/train/validation.py
 ```
-
-## **Try ParaSurf on Hugging Face!** 🤗
-
-
-We’re excited to share that **ParaSurf** is now live on Hugging Face 🤗! Try it out [here](https://huggingface.co/spaces/angepapa/ParaSurf).
 
 # TODO:
 - [x] Upload final weights to repository
