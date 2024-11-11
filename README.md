@@ -69,7 +69,7 @@ Download the best model weights for each benchmark dataset below:
 Run a blind prediction on a receptor file to identify binding sites:
 
 ```bash
-python blind_predict.py --receptor "test_blind_prediction/4N0Y_receptor_1.pdb" --model_weights "path/to/model_weights"
+python blind_predict.py --receptor test_blind_prediction/4N0Y_receptor_1.pdb --model_weights path/to/model_weights
 ```
 ![Alt text](images/pred_example.png)
 
