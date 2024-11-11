@@ -13,7 +13,7 @@ ParaSurf is a state-of-the-art surface-based deep learning model for predicting 
 
 
 
-**ParaSurf** Results on:
+**ParaSurf** Results on benchmark datasets:
 * PECAN 
 * Paragraph Expanded
 * MIPE
