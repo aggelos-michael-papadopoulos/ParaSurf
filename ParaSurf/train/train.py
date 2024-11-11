@@ -16,7 +16,7 @@ from tqdm import tqdm
 user = os.getenv('USER')
 base_dir = f'/home/{user}/PycharmProjects/github_projects/ParaSurf/test_data'
 CFG = {
-    'name': 'ParaSurf train dummy eraseme folder',
+    'name': 'ParaSurf train dummy example folder',
     'initial_lr': 0.0001,
     'epochs': 100,
     'batch_size': 64,
@@ -30,8 +30,8 @@ CFG = {
     'feats_path': os.path.join(base_dir, 'feats'),
     'TRAIN_samples': os.path.join(base_dir, 'datasets/eraseme_TRAIN.samples'),
     'VAL_proteins_list': os.path.join(base_dir, 'datasets/eraseme_VAL.proteins'),
-    'VAL_proteins': os.path.join(base_dir, 'pdbs/eraseme/VAL'),
-    'save_dir': f'/home/{user}/PycharmProjects/github_projects/ParaSurf/ParaSurf/train/eraseme/model_weights'
+    'VAL_proteins': os.path.join(base_dir, 'pdbs/example/VAL'),
+    'save_dir': f'/home/{user}/PycharmProjects/github_projects/ParaSurf/ParaSurf/train/example/model_weights'
 }
 
 if CFG['wandb']:
