@@ -6,7 +6,8 @@ ParaSurf is a state-of-the-art surface-based deep learning model for predicting 
 ---
 🚀 **Try [ParaSurf](https://huggingface.co/spaces/angepapa/ParaSurf) on 🤗 Hugging Face now!!!**  
 **Explore real-time predictions and visualize model outputs interactively!**
-_If space is sleeping press "restart" and wait approximately 5 min to re-built the space_
+
+**Note:** If you see *"This Space is sleeping due to inactivity"*, click "Restart this Space" and wait about 5 minutes for it to fully load.
 
 
 
