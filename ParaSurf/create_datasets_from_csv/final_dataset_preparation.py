@@ -96,7 +96,7 @@ def process_raw_pdb_data(info_df, initial_raw_pdb_files, final_folder):
 if __name__ == '__main__':
     user = os.getenv('USER')
 
-    datasets = ['PECAN', 'Paragraph_Expanded', 'MIPE']
+    datasets = ['PECAN', 'Paragraph_Expanded', 'MIPE']                                                                  # choose the dataset you want to create
 
     for dataset in datasets:
         if dataset == 'MIPE':  # here the split is train-val and test according to the MIPE paper
