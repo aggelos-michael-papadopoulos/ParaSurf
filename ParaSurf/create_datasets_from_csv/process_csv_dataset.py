@@ -91,7 +91,7 @@ if __name__ == '__main__':
 
     # ALL datasets follow the same process
     user = os.getenv('USER')
-    datasets = ['PECAN', 'Paragraph_Expanded', 'MIPE']
+    datasets = ['PECAN', 'Paragraph_Expanded', 'MIPE']                                                                  # choose the dataset you want to create
 
 
     # Define the correct headers

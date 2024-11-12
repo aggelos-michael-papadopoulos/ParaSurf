@@ -1,6 +1,7 @@
 # **Dataset preperation**
 
 ### Steps for Dataset Preparation
+`cd ParaSurf/create_datasets_from_csv`
 #### Step 1 
 Download Specific PDB Files Use the process_csv_dataset.py script to download the PDB files listed in the .csv files.
 ```bash
