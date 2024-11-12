@@ -106,7 +106,7 @@ python ParaSurf/train/validation.py
 # Contacts
 For any issues or questions, please don't hesitate to reach out: [angepapa@iti.gr](mailto:angepapa@iti.gr)
 
-## License
+# License
 
 This project is licensed under the MIT License. See [LICENSE](LICENSE) file for details.
 
