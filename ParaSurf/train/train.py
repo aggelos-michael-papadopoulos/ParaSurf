@@ -28,8 +28,8 @@ CFG = {
     'num_workers': 8,
     'feat_type': ['kalasanty_with_force_fields'],
     'feats_path': os.path.join(base_dir, 'feats'),
-    'TRAIN_samples': os.path.join(base_dir, 'datasets/eraseme_TRAIN.samples'),
-    'VAL_proteins_list': os.path.join(base_dir, 'datasets/eraseme_VAL.proteins'),
+    'TRAIN_samples': os.path.join(base_dir, 'datasets/example_TRAIN.samples'),
+    'VAL_proteins_list': os.path.join(base_dir, 'datasets/example_VAL.proteins'),
     'VAL_folder': os.path.join(base_dir, 'pdbs/example/VAL'),
     'save_dir': f'/home/{user}/PycharmProjects/github_projects/ParaSurf/ParaSurf/train/example/model_weights'
 }

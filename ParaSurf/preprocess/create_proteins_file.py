@@ -5,8 +5,8 @@ import os
 cases = ['TRAIN', 'VAL', 'TEST'] # change to ['TRAIN_VAL', 'TEST'] for MIPE
 user = os.getenv('USER')
 for case in cases:
-    pdbs_path = f'/home/{user}/PycharmProjects/github_projects/ParaSurf/test_data/pdbs/eraseme/{case}'
-    proteins_file = f'/home/{user}/PycharmProjects/github_projects/ParaSurf/test_data/datasets/eraseme_{case}.proteins'  # run for train val and test
+    pdbs_path = f'/home/{user}/PycharmProjects/github_projects/ParaSurf/test_data/pdbs/example/{case}'
+    proteins_file = f'/home/{user}/PycharmProjects/github_projects/ParaSurf/test_data/datasets/example_{case}.proteins'  # run for train val and test
 
     # Create directories if they don't exist
     os.makedirs(pdbs_path, exist_ok=True)

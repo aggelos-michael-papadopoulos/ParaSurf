@@ -1,6 +1,9 @@
 # **Feature Extraction - Preprocessing phase**
 
 This guide outlines the steps needed to generate the ParaSurf 41x41x41x22 input feature vector for training. By following these steps, you will create a dataset ready for training, organized in the specified folder structure.
+
+`cd ParaSurf/preprocess`
+
 ### Step 1: Clean the Antibody-Antigen Complex
 Remove ions, ligands, and water molecules from the antibody-antigen complex and rearrange atom IDs within the PDB structure.
 ```bash

@@ -182,9 +182,9 @@ protr_radius = 10  # ignore
 protonate = True  # if protein pdbs are not protonated (do not have Hydrogens) set it to True
 
 user = os.getenv('USER')
-pdbs_path = f'/home/{user}/PycharmProjects/github_projects/ParaSurf/test_data/pdbs/eraseme/TRAIN'  # input folder with protein pdbs for training
-surf_path = f'/home/{user}/PycharmProjects/github_projects/ParaSurf/test_data/surfpoints/eraseme/TRAIN'  # input folder with surface points for training
-feats_path = f'/home/{user}/PycharmProjects/github_projects/ParaSurf/test_data/feats/eraseme'  # training features folder
+pdbs_path = f'/home/{user}/PycharmProjects/github_projects/ParaSurf/test_data/pdbs/example/TRAIN'  # input folder with protein pdbs for training
+surf_path = f'/home/{user}/PycharmProjects/github_projects/ParaSurf/test_data/surfpoints/example/TRAIN'  # input folder with surface points for training
+feats_path = f'/home/{user}/PycharmProjects/github_projects/ParaSurf/test_data/feats/example'  # training features folder
 
 
 if not os.path.exists(feats_path):

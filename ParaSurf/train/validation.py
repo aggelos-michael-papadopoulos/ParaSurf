@@ -59,7 +59,7 @@ def validate_residue_level(val_proteins, modelweights, val_folder, epoch, feat_t
 
 
     # Check existence
-    check_path_exists(CFG_predict['TEST_FOLDER'])
+    check_path_exists(CFG_predict['TEST_folder'])
     check_path_exists(CFG_predict['MODEL_WEIGHTS_PATH'])
     ensure_directory(CFG_predict['OUTPUT_DIR'])
 
@@ -263,9 +263,9 @@ def validate_residue_level(val_proteins, modelweights, val_folder, epoch, feat_t
 # TEST best epoch weights on the TEST SET to reproduce paper results
 if __name__ == "__main__":
     user = os.getenv('USER')
-    test_set = f'/home/{user}/PycharmProjects/github_projects/ParaSurf/test_data/datasets/eraseme_TEST.proteins'
-    model_weights_path = f'/home/{user}/PycharmProjects/github_projects/ParaSurf/ParaSurf/train/eraseme/model_weights/epoch_0.pth'
-    test_folder = f'/home/{user}/PycharmProjects/github_projects/ParaSurf/test_data/pdbs/eraseme/TEST'
+    test_set = f'/home/{user}/PycharmProjects/github_projects/ParaSurf/test_data/datasets/example_TEST.proteins'
+    model_weights_path = f'/home/{user}/PycharmProjects/github_projects/ParaSurf/ParaSurf/train/example/model_weights/epoch_0.pth'
+    test_folder = f'/home/{user}/PycharmProjects/github_projects/ParaSurf/test_data/pdbs/example/TEST'
     epoch = int(model_weights_path.split('/')[-1].split('.')[0].split('_')[-1])
     feat_type = ['kalasanty_with_force_fields']
     feature_vector_lentgh = 22
