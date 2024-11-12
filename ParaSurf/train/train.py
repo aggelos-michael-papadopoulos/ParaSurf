@@ -30,7 +30,7 @@ CFG = {
     'feats_path': os.path.join(base_dir, 'feats'),
     'TRAIN_samples': os.path.join(base_dir, 'datasets/eraseme_TRAIN.samples'),
     'VAL_proteins_list': os.path.join(base_dir, 'datasets/eraseme_VAL.proteins'),
-    'VAL_proteins': os.path.join(base_dir, 'pdbs/example/VAL'),
+    'VAL_folder': os.path.join(base_dir, 'pdbs/example/VAL'),
     'save_dir': f'/home/{user}/PycharmProjects/github_projects/ParaSurf/ParaSurf/train/example/model_weights'
 }
 
@@ -137,12 +137,13 @@ for epoch in range(start_epoch, CFG['epochs']):
     cur_model_weight_path = os.path.join(CFG['save_dir'], f'epoch_{epoch}.pth')
     torch.save(model.state_dict(), cur_model_weight_path)
 
-    avg_auc_roc, avg_precision, avg_recall, avg_auc_pr, avg_f1 = validate_residue_level(valset=CFG['VAL_proteins_list'],
-                                                                    modelweights=cur_model_weight_path,
-                                                                    test_folder=CFG['VAL_proteins'],
-                                                                    epoch=epoch + 1,
-                                                                    feat_type=CFG['feat_type'],
-                                                                    feature_vector_lentgh=feature_vector_lentgh)
+    avg_auc_roc, avg_precision, avg_recall, avg_auc_pr, avg_f1 = validate_residue_level(
+        val_proteins=CFG['VAL_proteins_list'],
+        modelweights=cur_model_weight_path,
+        val_folder=CFG['VAL_folder'],
+        epoch=epoch + 1,
+        feat_type=CFG['feat_type'],
+        feature_vector_lentgh=feature_vector_lentgh)
 
 
     print(

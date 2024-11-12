@@ -16,11 +16,11 @@ from statistics import mean
 warnings.filterwarnings('ignore')
 
 
-def validate_residue_level(valset, modelweights, test_folder, epoch, feat_type, feature_vector_lentgh, training_scheme_on=True):
+def validate_residue_level(val_proteins, modelweights, val_folder, epoch, feat_type, feature_vector_lentgh, training_scheme_on=True):
 
     CFG_predict = {
-        'TEST_FOLDER': test_folder,             # test folder with receptors-antigens (we need the antigens to calculate the metrics)
-        'k_fold_test_txt': valset,
+        'TEST_folder': val_folder,             # test folder with receptors-antigens (we need the antigens to calculate the metrics)
+        'TEST_proteins': val_proteins,
         'MODEL_WEIGHTS_PATH': modelweights,
         'OUTPUT_DIR': ('/').join(modelweights.split('/')[:-2])+'/VAL_results' ,
         'batch_size': 64,
@@ -77,12 +77,12 @@ def validate_residue_level(valset, modelweights, test_folder, epoch, feat_type, 
 
 
     to_test_receptors = []
-    with open(CFG_predict['k_fold_test_txt'], 'r') as f:
+    with open(CFG_predict['TEST_proteins'], 'r') as f:
         for line in f:
             to_test_receptors.append(f'{line.strip()}.pdb')
 
     for rec in tqdm(to_test_receptors, total=len(to_test_receptors)):
-        rec_path = os.path.join(CFG_predict['TEST_FOLDER'], rec)
+        rec_path = os.path.join(CFG_predict['TEST_folder'], rec)
 
         # Process Protein
         # filter_out_HETATMs(rec_path) # maybe comment was done in the clean_dataset --> so delete this line
@@ -96,7 +96,7 @@ def validate_residue_level(valset, modelweights, test_folder, epoch, feat_type, 
         rec_name = rec_path.split('/')[-1].split('_')[0]
         rec_id = rec_path.split('_receptor_')[-1].split('.')[0]
 
-        matched_antigens = [os.path.join(CFG_predict['TEST_FOLDER'], antigen) for antigen in os.listdir(CFG_predict['TEST_FOLDER'])
+        matched_antigens = [os.path.join(CFG_predict['TEST_folder'], antigen) for antigen in os.listdir(CFG_predict['TEST_folder'])
                             if rec_name in antigen and f'_{rec_id}_' in antigen]
 
         print(matched_antigens)
