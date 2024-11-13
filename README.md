@@ -91,12 +91,20 @@ Follow instructions for feature extraction in the [ParaSurf Feature Extraction](
 ### 3. Train ParaSurf
 Train and validate ParaSurf to reproduce the paper's results:
 ```bash
-# Train and validate ParaSurf model
+# Train ParaSurf model
 python ParaSurf/train/train.py
-
-# Validate to reproduce paper results
-python ParaSurf/train/validation.py
 ```
+
+### 4. Reproduce paper results
+Now that you have the best weights (downloaded or created from scratch), you can reproduce ParaSurf results for each dataset:
+```bash
+# Validate ParaSurf model on a TEST set 
+python ParaSurf/train/validation.py
+
+# Reproduce ParaSurf results
+python ParaSurf/train/Post_process_validation_resutls.py
+```
+
 
 # TODO:
 - [x] Upload final weights to repository

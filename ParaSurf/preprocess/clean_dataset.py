@@ -24,4 +24,4 @@ def clean_dataset(dataset_path_with_pdbs):
 
 if __name__ == "__main__":
     user = os.getenv('USER')
-    clean_dataset(f'/home/{user}/PycharmProjects/github_projects/ParaSurf/test_data/pdbs/example/TRAIN')
+    clean_dataset(f'/home/{user}/PycharmProjects/github_projects/ParaSurf/test_data/pdbs/example/TRAIN')                # all train, val and test should be cleaned

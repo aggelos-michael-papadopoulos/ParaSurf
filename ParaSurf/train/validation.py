@@ -266,7 +266,8 @@ if __name__ == "__main__":
     test_set = f'/home/{user}/PycharmProjects/github_projects/ParaSurf/test_data/datasets/example_TEST.proteins'
     model_weights_path = f'/home/{user}/PycharmProjects/github_projects/ParaSurf/ParaSurf/train/example/model_weights/epoch_0.pth'
     test_folder = f'/home/{user}/PycharmProjects/github_projects/ParaSurf/test_data/pdbs/example/TEST'
-    epoch = int(model_weights_path.split('/')[-1].split('.')[0].split('_')[-1])
+    epoch = model_weights_path.split('/')[-1].split('.')[0].split('_')[-1]
+
     feat_type = ['kalasanty_with_force_fields']
     feature_vector_lentgh = 22
 
