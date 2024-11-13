@@ -95,10 +95,11 @@ Train and validate ParaSurf to reproduce the paper's results:
 python ParaSurf/train/train.py
 ```
 
-### 4. Reproduce paper results
-Now that you have the best weights (downloaded or created from scratch), you can reproduce ParaSurf results for each dataset:
+### 4. Reproduce ParaSurf Results
+Once you have the best weights (downloaded or created from scratch), you can validate the model on test sets and reproduce the results presented in the ParaSurf paper:
+
 ```bash
-# Validate ParaSurf model on a TEST set 
+# Validate the ParaSurf model on the TEST set 
 python ParaSurf/train/validation.py
 
 # Reproduce ParaSurf results

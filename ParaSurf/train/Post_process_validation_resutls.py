@@ -2,13 +2,13 @@ import os
 import numpy as np
 
 user = os.getenv('USER')
-results_path = '/home/angepapa/PycharmProjects/github_projects/ParaSurf/ParaSurf/train/TEST_results'
+results_path = f'/home/{user}/PycharmProjects/github_projects/ParaSurf/ParaSurf/train/PECAN/TEST'
 
 epoch = 8                                       # specify the epoch of your best model, IF YOU HAVE ONLY THE best.pth (e.g. PECAN_best.pth), just type epoch='best'
 # epoch = 'best'
 thresholds = [0.5, 0.734]
 cases = ['CDR_plus_minus_2', 'Fv', 'Fab']
-dataset = 'PECAN'                               # choose the dataset; 'PECAN', 'Paragraph_Expanded', 'MIPE'
+dataset = 'PECAN'                               # choose the dataset; 'PECAN', 'Paragraph_Expanded', or 'MIPE'
 
 # Reset lists at the start of each epoch
 auc_roc = []
@@ -71,7 +71,6 @@ for case in cases:
             file.write(f"Average Precision: {np.mean(precision):.4f}\n")
             file.write(f"Average Recall: {np.mean(recall):.4f}\n")
             file.write(f"Average F1 Score: {2 * np.mean(precision) * np.mean(recall) / (np.mean(precision) + np.mean(recall)):.4f}\n")
-            # file.write(f"Average F1 Score: {np.mean(f1_score):.4f}\n")
             file.write(f"Average AUC-PR: {np.mean(auc_pr):.4f}\n")
             file.write(f"Average MCC: {np.mean(mcc):.4f}\n")
             file.write(f"CAUROC: {np.median(auc_roc):.4f}\n")
