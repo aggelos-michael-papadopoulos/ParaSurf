@@ -79,7 +79,7 @@ python blind_predict.py --receptor test_blind_prediction/4N0Y_receptor_1.pdb --m
 ![Alt text](images/pred_example.png)
 
 
-## Create Dataset from scratch
+## Create Datasets and train ParaSurf from scratch
 Prepare the dataset from initial .csv files and create ParaSurf features for training.
 
 ### 1. Create dataset from the .csv files
@@ -95,8 +95,8 @@ Train and validate ParaSurf to reproduce the paper's results:
 python ParaSurf/train/train.py
 ```
 
-### 4. Reproduce ParaSurf Results
-Once you have the best weights (downloaded or created from scratch), you can validate the model on test sets and reproduce the results presented in the ParaSurf paper:
+## Reproduce ParaSurf Results
+Once you have the best weights (downloaded or created from scratch), you can validate the model on the test sets and reproduce the results presented in the ParaSurf paper:
 
 ```bash
 # Validate the ParaSurf model on the TEST set 
