@@ -121,4 +121,13 @@ This project is licensed under the MIT License. See [LICENSE](LICENSE) file for 
 
 
 # Citation
-coming soon ...
+```bibtex
+@article{papadopoulos2024parasurf,
+  title={ParaSurf: A Surface-Based Deep Learning Approach for Paratope-Antigen Interaction Prediction},
+  author={Papadopoulos, Angelos Michael and Axenopoulos, Apostolos and Iatrou, Anastasia and Stamatopoulos, Kostas and Alvarez, Federico and Daras, Petros},
+  journal={bioRxiv},
+  pages={2024--12},
+  year={2024},
+  publisher={Cold Spring Harbor Laboratory}
+}
+```
