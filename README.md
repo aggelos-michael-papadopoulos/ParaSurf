@@ -5,6 +5,7 @@ ParaSurf is a state-of-the-art surface-based deep learning model for predicting 
 
 
 [![License](https://img.shields.io/github/license/aggelos-michael-papadopoulos/ParaSurf)](https://github.com/aggelos-michael-papadopoulos/LICENSE)
+[![Paper](https://img.shields.io/badge/Bioarxiv)](https://www.biorxiv.org/content/10.1101/2024.12.16.628621v1.abstract)
 [![Forks](https://img.shields.io/github/forks/aggelos-michael-papadopoulos/ParaSurf)](https://github.com/aggelos-michael-papadopoulos/ParaSurf/network/members)
 
 ---
