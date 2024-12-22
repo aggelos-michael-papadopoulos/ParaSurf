@@ -1,5 +1,5 @@
 # **ParaSurf**
-## **A Surface-Based Deep Learning Approach for Paratope-Antigen Interaction Prediction**
+## **[A Surface-Based Deep Learning Approach for Paratope-Antigen Interaction Prediction](https://www.biorxiv.org/content/10.1101/2024.12.16.628621v1.abstract)**
 
 ParaSurf is a state-of-the-art surface-based deep learning model for predicting interactions between paratopes and antigens, with outstanding results across three major antibody-antigen benchmarks.
 
