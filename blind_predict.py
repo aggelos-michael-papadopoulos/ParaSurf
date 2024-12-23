@@ -5,7 +5,7 @@ from ParaSurf.preprocess.clean_dataset import clean_dataset
 from ParaSurf.train.protein import Protein_pred
 from ParaSurf.train.network import Network
 from ParaSurf.train.bsite_extraction import Bsite_extractor
-from ParaSurf.train.utils import receptor_info, write_residue_prediction_pdb, write_atom_prediction_pdb
+from ParaSurf.train.utils import receptor_info, write_residue_prediction_pdb, write_atom_prediction_pdb, antibody_input_recognition
 import warnings
 
 warnings.filterwarnings('ignore')
@@ -36,6 +36,14 @@ receptor = args.receptor
 model_weights = args.model_weights
 mesh_dense = args.mesh_dense
 results_save_path = f"{os.path.dirname(receptor)}/{os.path.basename(receptor).split('.')[0]}"
+
+# Validate if the input PDB file corresponds to an antibody structure
+is_antibody, message = antibody_input_recognition(receptor)
+if not is_antibody:
+    print(f"\nValidation Failed: {message}")
+    print("Please provide a valid antibody structure as input.")
+    exit(1)
+
 
 # Clean the dataset
 clean_dataset(os.path.dirname(receptor))

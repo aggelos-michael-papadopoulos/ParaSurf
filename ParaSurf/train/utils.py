@@ -1,4 +1,5 @@
 import warnings, os
+from Bio.PDB import PDBParser
 import numpy as np
 from scipy.spatial.distance import euclidean
 from sklearn.cluster import KMeans
@@ -497,3 +498,53 @@ def receptor_info(receptor, lig_scores_only_receptor_atoms):
         residues_best[res_id]['scores'] = check_best[best_atom]
 
     return residues, residues_best
+
+def antibody_input_recognition(pdb_file):
+    """
+    Checks if the input PDB file corresponds to an antibody-like structure.
+    Criteria:
+    1. The structure contains two chains.
+    2. The 'compound' section mentions "Heavy" or "Light" chains.
+    3. If 'compound' section is missing or empty, rely on the two-chain criterion.
+
+    Parameters:
+    pdb_file (str): Path to the PDB file.
+
+    Returns:
+    bool: True if the input is likely an antibody, False otherwise.
+    str: Reason for the decision (if False).
+    """
+    from Bio.PDB import PDBParser
+
+    parser = PDBParser(QUIET=True)
+
+    try:
+        # Parse the structure
+        structure = parser.get_structure("input", pdb_file)
+    except Exception as e:
+        return False, f"Failed to parse PDB file: {e}"
+
+    # Get all chains
+    chains = list(structure.get_chains())
+
+    # Check for two chains
+    if len(chains) != 2:
+        return False, f"The structure contains {len(chains)} chain(s), expected 2 for an antibody (Heavy & Light)."
+
+    # Check the 'compound' section for "Heavy" or "Light"
+    try:
+        compound_info = structure.header.get("compound", {})
+        if compound_info:  # Proceed if 'compound' section is not empty
+            for _, compound_details in compound_info.items():
+                molecule_name = compound_details.get("molecule", "").lower()
+                if "heavy" in molecule_name or "light" in molecule_name:
+                    return True, "Antibody found based on compound information."
+        # If compound_info exists but doesn't mention "Heavy" or "Light"
+        # Proceed with two-chain criterion
+        return True, "Antibody assumed based on two-chain structure; compound information is missing or does not mention 'Heavy'/'Light'."
+    except Exception as e:
+        # Handle errors in accessing 'compound' section
+        return True, "Antibody assumed based on two-chain structure; compound information could not be read."
+
+    # Default fallback
+    return True, "Antibody assumed based on two-chain structure."
