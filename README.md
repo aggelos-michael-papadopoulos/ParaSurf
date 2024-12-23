@@ -9,6 +9,7 @@ ParaSurf is a state-of-the-art surface-based deep learning model for predicting 
 [![Forks](https://img.shields.io/github/forks/aggelos-michael-papadopoulos/ParaSurf)](https://github.com/aggelos-michael-papadopoulos/ParaSurf/network/members)
 [![Stars](https://img.shields.io/github/stars/aggelos-michael-papadopoulos/ParaSurf)](https://github.com/aggelos-michael-papadopoulos/ParaSurf/stargazers)
 
+
 ---
 🚀 **Try [ParaSurf](https://huggingface.co/spaces/angepapa/ParaSurf) on 🤗 Hugging Face now!!!**  
 **Explore real-time predictions and visualize model outputs interactively!**
@@ -111,12 +112,6 @@ python ParaSurf/train/validation.py
 # Reproduce ParaSurf results
 python ParaSurf/train/Post_process_validation_resutls.py
 ```
-
-
-# TODO:
-- [x] Upload final weights to repository
-- [x] Upload requirements file for the ParaSurf environment
-- [x] Create web-demo at Hugging face
 
 # Contacts
 For any issues or questions, please don't hesitate to reach out: [angepapa@iti.gr](mailto:angepapa@iti.gr)
