@@ -4,7 +4,7 @@
 ParaSurf is a state-of-the-art surface-based deep learning model for predicting interactions between paratopes and antigens, with outstanding results across three major antibody-antigen benchmarks.
 
 
-[![License](https://img.shields.io/github/license/aggelos-michael-papadopoulos/ParaSurf)](https://github.com/aggelos-michael-papadopoulos/LICENSE)
+[![License](https://img.shields.io/github/license/aggelos-michael-papadopoulos/ParaSurf)](https://github.com/aggelos-michael-papadopoulos/ParaSurf/blob/main/LICENSE)
 [![Paper](https://img.shields.io/badge/Bioarxiv-Preprint-blue)](https://www.biorxiv.org/content/10.1101/2024.12.16.628621v1.abstract)
 [![Forks](https://img.shields.io/github/forks/aggelos-michael-papadopoulos/ParaSurf)](https://github.com/aggelos-michael-papadopoulos/ParaSurf/network/members)
 [![Stars](https://img.shields.io/github/stars/aggelos-michael-papadopoulos/ParaSurf)](https://github.com/aggelos-michael-papadopoulos/ParaSurf/stargazers)
