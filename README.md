@@ -65,7 +65,7 @@ cd ..
 
 All models are hosted [here](https://drive.google.com/drive/folders/1Kpehru9SnWsl7_Wq93WuI_o7f8wrPgpI?usp=drive_link).
 
-Download the best model weights for each benchmark dataset below
+Download the best model weights for each benchmark dataset below:
 
 
 | Dataset                                | Weights                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
