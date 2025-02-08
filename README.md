@@ -17,7 +17,8 @@ ParaSurf is a state-of-the-art surface-based deep learning model for predicting 
 
 **Note:** If you see *"This Space is sleeping due to inactivity"*, click "Restart this Space" and wait about 3 minutes for it to fully load.
 
-
+🧬 **ParaSurf is now also live on [Neurosnap](https://neurosnap.ai/service/ParaSurf)!**  
+Looking for another way to run **ParaSurf**? Now, you can seamlessly access it on **Neurosnap**, where AI meets structural biology!  
 
 
 
