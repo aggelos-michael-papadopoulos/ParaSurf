@@ -1,7 +1,7 @@
 torch==2.1.2
 numpy==1.26.4
 torchvision
-transformers==4.42.4
+transformers>=4.48.0
 torchsummary
 scipy
 tqdm
