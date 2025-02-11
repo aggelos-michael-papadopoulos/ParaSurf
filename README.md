@@ -63,6 +63,8 @@ sudo make install
 cd ..
 ```
 
+## Docker installation
+For detailed instructions on Docker Installation follow [ParaSurf Docker_Installation](ParaSurf/Docker/README.md).
 ## **ParaSurf Model Weights**
 
 All models are hosted [here](https://drive.google.com/drive/folders/1Kpehru9SnWsl7_Wq93WuI_o7f8wrPgpI?usp=drive_link).
