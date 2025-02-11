@@ -63,7 +63,7 @@ sudo make install
 cd ..
 ```
 
-## Docker installation
+## 🐳 Docker installation
 For detailed instructions on Docker Installation follow [ParaSurf Docker_Installation](ParaSurf/Docker/README.md).
 ## **ParaSurf Model Weights**
 
