@@ -12,10 +12,12 @@ sudo docker run --gpus all -it --rm \
     parasurf:latest
 ```
 
-## Activate ParaSurf & 📥 Download Model Weights
+## 📥 Download Model Weights
 
 ```bash
+# Activate ParaSurf
 conda activate ParaSurf
+# Download model weights
 mkdir -p /workspace/weights && \
     conda run -n ParaSurf gdown --id 1LBydgQ7sTXTAuEdE3Le_PH6cY_F2h_Tp -O /workspace/weights/ParaSurf_best.pth && \
     conda run -n ParaSurf gdown --id 1vZGH-T6K5_ShVma3dwLkLdkoivs09rSP -O /workspace/weights/Pecan_best.pth && \
