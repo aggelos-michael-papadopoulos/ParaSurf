@@ -1,4 +1,6 @@
-![ParaSurf](images/logo.png)
+<p align="center">
+  <img src="images/logo.png" alt="ParaSurf Logo" width="300">
+</p>
 
 # **ParaSurf**
 ## **[A Surface-Based Deep Learning Approach for Paratope-Antigen Interaction Prediction](https://doi.org/10.1093/bioinformatics/btaf062)**
