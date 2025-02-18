@@ -5,7 +5,7 @@
 # **ParaSurf**
 ## **[A Surface-Based Deep Learning Approach for Paratope-Antigen Interaction Prediction](https://doi.org/10.1093/bioinformatics/btaf062)**
 
-ParaSurf is a state-of-the-art surface-based deep learning model for predicting interactions between paratopes and antigens, with outstanding results across three major antibody-antigen benchmarks.
+ParaSurf is a state-of-the-art surface-based deep learning model for predicting interactions between antibodies and antigens, with outstanding results across three major antibody-antigen benchmarks.
 
 
 [![License](https://img.shields.io/github/license/aggelos-michael-papadopoulos/ParaSurf)](https://github.com/aggelos-michael-papadopoulos/ParaSurf/blob/main/LICENSE)
@@ -89,7 +89,7 @@ Download the best model weights for each benchmark dataset below:
 | ParaSurf Dataset (PECAN + Paragraph Expanded + MIPE) | [Download Best Weights](https://drive.google.com/uc?export=download&id=1LBydgQ7sTXTAuEdE3Le_PH6cY_F2h_Tp)                                                    |
 
 
-## **Blind paratope binding site prediction**
+## **Blind antibody binding site prediction**
 Run a blind prediction on a receptor file to identify binding sites:
 
 ```bash
