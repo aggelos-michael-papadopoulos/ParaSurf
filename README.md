@@ -134,6 +134,7 @@ This project is licensed under the MIT License. See [LICENSE](LICENSE) file for 
 
 
 # Citation
+If you use ParaSurf, please cite:
 ```bibtex
 @article{papadopoulos2025parasurf,
   title={ParaSurf: A Surface-Based Deep Learning Approach for Paratope-Antigen Interaction Prediction},
