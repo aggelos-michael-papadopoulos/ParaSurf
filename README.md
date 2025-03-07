@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/logo.png" alt="ParaSurf Logo" width="325">
+  <img src="images/logo_.png" alt="ParaSurf Logo" width="325">
 </p>
 
 # **ParaSurf**
