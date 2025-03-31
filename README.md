@@ -136,7 +136,7 @@ For any issues or questions, please don't hesitate to reach out: [angepapa@iti.g
 This project is licensed under the MIT License. See [LICENSE](LICENSE) file for details.
 
 
-# Citation
+# 📍 Citation
 If you use ParaSurf, please cite:
 ```bibtex
 @article{papadopoulos2025parasurf,
