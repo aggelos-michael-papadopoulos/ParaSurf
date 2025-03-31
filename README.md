@@ -89,7 +89,7 @@ Download the best model weights for each benchmark dataset below:
 | Paragraph Expanded (Heavy Chains Only)               | [Download Best Weights](https://drive.google.com/uc?export=download&id=16LA99tPYP7vkKpc-ycn98esEUhXUDc-n)                                                    |
 | Paragraph Expanded (Light Chains Only)               | [Download Best Weights](https://drive.google.com/uc?export=download&id=1mEBLPKi1sny-inr1ogdYWoo44XgbH8db)                                                    |
 | MIPE Dataset (5-fold CV)                             | [best fold-1](https://drive.google.com/uc?export=download&id=1vIg9m557yiQdYsDelbR39Ch2QTKeLJp5), [best fold-2](https://drive.google.com/uc?export=download&id=1wU--r9sMxdF32nmdp3x9N1Ah8UriZVVD), [best fold-3](https://drive.google.com/uc?export=download&id=1LeATakZ-fxIaovQ8wydZbBNfSkbTsub7), [best fold-4](https://drive.google.com/uc?export=download&id=1dj482apCA09sBw2OUQrNR3PVBLEU9okp), [best fold-5](https://drive.google.com/uc?export=download&id=1Ai0VnytiUNUJsJ5ifKuBv4nkiz35iI6M) |
-| ParaSurf Dataset (PECAN + Paragraph Expanded + MIPE) | [Download Best Weights](https://drive.google.com/uc?export=download&id=1LBydgQ7sTXTAuEdE3Le_PH6cY_F2h_Tp)                                                    |
+
 
 
 ## **Blind antibody binding site prediction**
