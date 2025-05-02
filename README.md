@@ -9,8 +9,8 @@ ParaSurf is a state-of-the-art surface-based deep learning model for predicting 
 
 
 [![License](https://img.shields.io/github/license/aggelos-michael-papadopoulos/ParaSurf)](https://github.com/aggelos-michael-papadopoulos/ParaSurf/blob/main/LICENSE)
-[![Paper](https://img.shields.io/badge/Bioinformatics-Published-blue)](https://doi.org/10.1093/bioinformatics/btaf062)
-[![Paper](https://img.shields.io/badge/Bioarxiv-Preprint-blue)](https://www.biorxiv.org/content/10.1101/2024.12.16.628621v2)
+[![Paper](https://img.shields.io/badge/Bioinformatics-ParaSurf-blue)](https://doi.org/10.1093/bioinformatics/btaf062)
+[![Paper](https://img.shields.io/badge/Bioarxiv-ParaSurf-red)](https://www.biorxiv.org/content/10.1101/2024.12.16.628621v2)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/parasurf-a-surface-based-deep-learning/antibody-antigen-binding-prediction-on-pecan)](https://paperswithcode.com/sota/antibody-antigen-binding-prediction-on-pecan?p=parasurf-a-surface-based-deep-learning)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/parasurf-a-surface-based-deep-learning/antibody-antigen-binding-prediction-on-1)](https://paperswithcode.com/sota/antibody-antigen-binding-prediction-on-1?p=parasurf-a-surface-based-deep-learning)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/parasurf-a-surface-based-deep-learning/antibody-antigen-binding-prediction-on-mipe)](https://paperswithcode.com/sota/antibody-antigen-binding-prediction-on-mipe?p=parasurf-a-surface-based-deep-learning)
@@ -24,13 +24,13 @@ ParaSurf is a state-of-the-art surface-based deep learning model for predicting 
 
 **Note:** If you see *"This Space is sleeping due to inactivity"*, click "Restart this Space" and wait about 3 minutes for it to fully load.
 
-🧬 **ParaSurf is NOW also live on [Superbio](https://app.superbio.ai/apps/67c5d70367f35115b8de2693)!**
+🧬 **ParaSurf is live on [Superbio](https://app.superbio.ai/apps/67c5d70367f35115b8de2693)!**
 Feel free to experiment with it.
 
 🧬 **ParaSurf is live on [Neurosnap](https://neurosnap.ai/service/ParaSurf)!**  
 Looking for another way to run **ParaSurf**? Now, you can seamlessly access it on **Neurosnap**, where AI meets structural biology!  
 
-
+ ---
 
 **ParaSurf** Results on benchmark datasets:
 * PECAN 
