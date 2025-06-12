@@ -10,7 +10,6 @@ ParaSurf is a state-of-the-art surface-based deep learning model for predicting 
 
 [![License](https://img.shields.io/github/license/aggelos-michael-papadopoulos/ParaSurf)](https://github.com/aggelos-michael-papadopoulos/ParaSurf/blob/main/LICENSE)
 [![Paper](https://img.shields.io/badge/Bioinformatics-ParaSurf-blue)](https://doi.org/10.1093/bioinformatics/btaf062)
-[![Paper](https://img.shields.io/badge/Bioarxiv-ParaSurf-red)](https://www.biorxiv.org/content/10.1101/2024.12.16.628621v2)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/parasurf-a-surface-based-deep-learning/antibody-antigen-binding-prediction-on-pecan)](https://paperswithcode.com/sota/antibody-antigen-binding-prediction-on-pecan?p=parasurf-a-surface-based-deep-learning)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/parasurf-a-surface-based-deep-learning/antibody-antigen-binding-prediction-on-1)](https://paperswithcode.com/sota/antibody-antigen-binding-prediction-on-1?p=parasurf-a-surface-based-deep-learning)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/parasurf-a-surface-based-deep-learning/antibody-antigen-binding-prediction-on-mipe)](https://paperswithcode.com/sota/antibody-antigen-binding-prediction-on-mipe?p=parasurf-a-surface-based-deep-learning)
