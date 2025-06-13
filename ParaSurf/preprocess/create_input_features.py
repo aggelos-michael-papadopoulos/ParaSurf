@@ -112,7 +112,7 @@ def balanced_sampling(surf_file, protein_file, lig_files, cutoff=4.5):
     for i, sample in enumerate(sample_idxs):
         features = featurizer.grid_feats(points[sample], normals[sample], rotate_grid)
         if np.count_nonzero(features) == 0:
-            print('Zero features', protein_file.rsplit('/', 1)[1][:-4], i, points[sample], normals[sample])
+            print(f"[Info] Skipping atom-level index {i}: no surface-based features generated. This is expected.")
 
         yield features, sample_labels[i], points[sample], normals[sample]
 
