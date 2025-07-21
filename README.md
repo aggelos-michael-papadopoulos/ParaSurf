@@ -23,11 +23,17 @@ ParaSurf is a state-of-the-art surface-based deep learning model for predicting 
 
 **Note:** If you see *"This Space is sleeping due to inactivity"*, click "Restart this Space" and wait about 3 minutes for it to fully load.
 
-🧬 **ParaSurf is live on [Superbio.ai](https://app.superbio.ai/apps/67c5d70367f35115b8de2693)!**
-Feel free to experiment with it.
+### **ParaSurf Integration in AI Startups:** <span style="color:#10ad02"><i>Superbio.ai</i></span> & <span style="color:#A873D1"><i>Neurosnap.ai</i></span>
 
-🧬 **ParaSurf is live on [Neurosnap.ai](https://neurosnap.ai/service/ParaSurf)!**  
-Looking for another way to run **ParaSurf**? Now, you can seamlessly access it on **Neurosnap**, where AI meets structural biology!  
+<img src="https://miro.medium.com/v2/resize:fit:2400/1*4hVfDwxA2T9SDfyH9evkug.png" alt="Superbio.ai" width="16" style="vertical-align:middle; margin-right:4px;">
+<a href="https://app.superbio.ai/apps/67c5d70367f35115b8de2693" target="_blank"><strong>ParaSurf is live on Superbio.ai!</strong></a> – Try it out now!
+
+
+<br>
+<img src="https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/ixegeangbuhfcs5a3u9d" alt="Neurosnap.ai" width="16" style="vertical-align:middle; margin-right:4px;">
+<a href="https://neurosnap.ai/service/ParaSurf" target="_blank"><strong>ParaSurf is live on Neurosnap.ai!</strong></a> – Try it out now!
+
+
 
  ---
 
