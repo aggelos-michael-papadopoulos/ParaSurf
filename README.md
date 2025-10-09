@@ -19,7 +19,7 @@ ParaSurf is a state-of-the-art surface-based deep learning model for predicting 
 **Explore real-time predictions and visualize model outputs interactively!**
 
 <p align="center">
-  <img src="images/HF_demo_.gif" alt="ParaSurf Logo" width="400">
+  <img src="images/HF_demo_.gif" alt="ParaSurf Logo" width="600">
 </p>
 
 **Note:** If you see *"This Space is sleeping due to inactivity"*, click "Restart this Space" and wait about 3 minutes for it to fully load.
