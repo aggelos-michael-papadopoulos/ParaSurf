@@ -18,6 +18,10 @@ ParaSurf is a state-of-the-art surface-based deep learning model for predicting 
 🚀 **Try [ParaSurf](https://huggingface.co/spaces/angepapa/ParaSurf) on 🤗 Hugging Face now!!!**  
 **Explore real-time predictions and visualize model outputs interactively!**
 
+<p align="center">
+  <img src="images/HF_demo.gif" alt="ParaSurf Logo" width="325">
+</p>
+
 **Note:** If you see *"This Space is sleeping due to inactivity"*, click "Restart this Space" and wait about 3 minutes for it to fully load.
 
 ### ParaSurf Integration in AI Startups: *Superbio.ai* & *Neurosnap.ai*
