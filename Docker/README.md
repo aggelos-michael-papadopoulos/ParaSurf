@@ -26,5 +26,5 @@ mkdir -p /workspace/weights && \
 
 ## Run a prediction 🔍
 ```bash
-python blind_predict.py --receptor test_blind_prediction/4N0Y_receptor_1.pdb --model_weights weights/ParaSurf_best.pth
+python blind_predict.py --receptor test_blind_prediction/4N0Y_receptor_1.pdb --model_weights weights/Paragraph_expanded_best.pth
 ```
