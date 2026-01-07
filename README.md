@@ -33,6 +33,9 @@ ParaSurf is a state-of-the-art surface-based deep learning model for predicting 
 ![Neurosnap Logo](images/neurosnap_logo.png)
 **[ParaSurf is live on Neurosnap.ai!](https://neurosnap.ai/service/ParaSurf)** – Try it out now!
 
+![Tamarind Logo](images/tamarind_bio_logo.png)
+**[ParaSurf is live on tamarind.bio!](https://app.tamarind.bio/tools/parasurf)** – Try it out now!
+
 ![ViciBio Logo](images/vici_bio_logo.jpg)
 **[ParaSurf is live on Vici.bio!](https://www.vici.bio/parasurf)** – Try it out now!
 
