@@ -105,14 +105,14 @@ Download the best model weights for each benchmark dataset below:
 
 
 ## **Blind antibody binding site prediction**
-Run a blind prediction on a receptor file to identify binding sites:
+Run a blind prediction on an antibody file to identify binding sites:
 
 ```bash
 python blind_predict.py --receptor test_blind_prediction/4N0Y_receptor_1.pdb --model_weights path/to/model_weights
 ```
 ![Alt text](images/pred_example.png)
 
-Or Run blind prediction on a folder containing many antibodies (see [run_on_folder](test_data/run_on_folder)):
+Or run blind prediction on a folder containing many antibodies (see [run_on_folder](test_data/run_on_folder)):
 
 ```bash
 python blind_predict_folder.py -i test_data/run_on_folder -w path/to/model_weights -d 0.2
