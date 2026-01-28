@@ -142,7 +142,6 @@ if __name__ == "__main__":
         print("No `_antibody.pdb` files found in", args.input_dir)
         exit(1)
 
-    # Process with progress bar
     for ab_file in tqdm(antibody_files, desc="Processing antibodies"):
         receptor_path = os.path.join(args.input_dir, ab_file)
         process_antibody(
